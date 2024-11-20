@@ -1,0 +1,8 @@
+{
+    "root": ".",
+    "title": "MEMO Docs",
+    "author": "MemoLabs",
+    "plugins": [
+        "pageview-count"
+    ]
+}
