@@ -1,4 +1,4 @@
-# Distribution and Econmic Model
+# Distribution
 
 ## Initial Coin Distribution
 
