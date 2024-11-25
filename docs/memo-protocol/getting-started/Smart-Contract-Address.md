@@ -1,12 +1,12 @@
 # Smart Contract Addresses
 
-A bunch of smart contracts are used to implement the settlement layer in memo, and for the mainnet, we list the contracts addresses.
+A bunch of smart contracts are used to implement the settlement layer in MEMO, and for the mainnet, we list the contracts addresses.
 
 ## Mainnet Smart Contract
 
 ### NetWork
 
-Production Chain of Memo
+Production Chain of MEMO
 
 ### Contracts
 
@@ -46,4 +46,3 @@ Production Chain of Memo
 |8 | 0x6b4034f6bbc65146bb6fa9556e6bb44f061f8421 |
 |9 | 0x94d42e9742c6ec74d048f381345d61d932a9c06c |
 |10 |0xc55b576d1787ff13258ce15218ec76c8f49ecce7 |
-
