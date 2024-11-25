@@ -1,42 +1,5 @@
 # DA
 
-## Mooda
-
-### 组件
-
-- **server**： 提供存储服务、代币交易、NFT交易等服务
-
-- **syncer**： 提供BTC链上消息
-- **kzg.srs**: kzg证明相关文件
-
-### 准备
-
-1. 部署Bitcoin https://bitcoincore.org/bin/bitcoin-core-26.0/bitcoin-26.0-x86_64-linux-gnu.tar.gz
-
-2. 部署ord https://github.com/ordinals/ord.git
-
-### 编译源码
-
-```bash
-git clone git@132.232.87.203:mooda/mooda.git
-cd mooda
-make all
-```
-
-### 启动indexer
-
-```bash
-./indexer run > indexer.log 2>&1
-```
-
-### 启动server
-
-```bash
-./server init
-./server deploy
-./server run -c regtest > server.log 2>&1
-```
-
 ## Meeda
 
 
