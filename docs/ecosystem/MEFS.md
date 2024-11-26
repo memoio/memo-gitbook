@@ -4,10 +4,10 @@
 
 &nbsp;
 
-Memo is a large-scale decentralized data storage system with high security and reliability built around blockchain. It is a new-gen blockchain decentralized cloud storage protocol that organizes global edge storage nodes to provide users with safe, reliable and highly available storage services.
+MEFS（MEMO is a large-scale decentralized data storage system with high security and reliability built around blockchain. It is a new-gen blockchain decentralized cloud storage protocol that organizes global edge storage nodes to provide users with safe, reliable and highly available storage services.
 
 &nbsp;
-MEFS(MEmo File System) is the file storage system for MEMO.
+MEFS(MEMO File System) is the file storage system for MEMO.
 
 ![memo](../../images/mefs/memo-icon.png)
 
@@ -139,7 +139,6 @@ In addition to basic information matching, Keeper's management functions are mai
 
 In addition, another important function of Keeper is to trigger payment for storage fees. The payment is not triggered by the payer User or the payer Provider, but the payment is triggered by the middleman Keeper. This is mainly for the consideration of increasing the fairness of the system. Triggering by the middleman Keeper can reduce the probability of fraudulent behavior.
 
-​ Figure: Basic functions of Keeper
 
 ##### Punishment mechanism
 
