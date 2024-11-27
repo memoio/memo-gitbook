@@ -1,14 +1,14 @@
-# 智能合约地址
+# Smart Contract Addresses
 
-在 MEMO 中，使用一系列智能合约来实现结算层，对于主网，我们列出了这些合约的地址。
+A bunch of smart contracts are used to implement the settlement layer in MEMO, and for the mainnet, we list the contracts addresses.
 
-## 主网的智能合约
+## Mainnet Smart Contract
 
-### 网络
+### NetWork
 
-MEMO 生产链。
+Production Chain of MEMO
 
-### 合约
+### Contracts
 
 | Name | Address |
 |:--------|:-------------|
@@ -32,7 +32,7 @@ MEMO 生产链。
 |rewardAccessAddr|  0x4Cbdbd6E3a3034e51B33276CbAB6bF8AF97deF73|
 |rewardAddr|  0x2CC45e0D31244F3102a2521E3CBFefb580C4F070|
 
-### 管理员地址
+### Administrators
 
 | Index | Address |
 |:-------|:---------|

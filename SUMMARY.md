@@ -16,7 +16,7 @@
 
     * [Computation & Training Layer](docs-cn/memo-protocol/protocol/Computation-Training-Layer.md)
   
-    * [User & Data & Device Identity Layer](docs-cn/memo-protocol/protocol/Identity-Layer.md)
+    * [Identity Layer](docs-cn/memo-protocol/protocol/Identity-Layer.md)
 
     * [Execution Layer](docs-cn/memo-protocol/protocol/Execution-Layer.md)
 
