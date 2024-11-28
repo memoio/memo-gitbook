@@ -2,47 +2,21 @@
 
 ## Composition of the Data Storage Layer
 
-The data storage layer consists of underlying storage infrastructure and the Data Availability Layer (DA). The underlying storage technologies include MEFS, IPFS, GreenField, Arweave, etc., and the Data Availability Layer includes Meeda and Mooda.
+The data storage layer is used to provide data access interfaces for upper-layer protocols, with existing storage products including MEFS, IPFS, GreenField, Arweave, etc. In the product ecosystem of Memolabs, MEFS, which is independently designed and developed, is used as the underlying storage.
 
-### About the Data Availability Layer
+### About MEFS
 
-The Data Availability Layer (DAL) is an emerging solution designed to address data storage and accessibility issues within blockchain networks, ensuring that all network participants can quickly and easily access user data and other information.
+MEFS is a decentralized storage file system independently designed and developed by Memolabs. It addresses the issues of data security, reliability, and privacy in traditional storage systems through various cutting-edge technologies, avoiding the pitfalls of centralized storage systems, and is applied as the storage infrastructure of the MEMO protocol stack.
 
-The Data Availability Layer has the following features:
+Below is a focused introduction to the design concepts and principles of the MEFS storage system.
 
-It alleviates the burden on the chain by separating data storage tasks from the chain, thereby improving the processing speed and efficiency of the entire network.
-
-It provides data verification mechanisms to ensure the accuracy and integrity of data without exposing the data itself, enhancing storage privacy.
-
-It can add access control at the storage layer to safeguard user data security and privacy needs.
-
-Data storage typically uses distributed storage, which helps maintain the decentralized nature of the entire network.
-
-It has strong compatibility and can support multiple blockchain networks.
-
-+ Meeda
-Meeda is a data availability solution based on Ethereum security launched by Memolabs, providing reliable data availability protection for Ethereum Rollup.
-
-The name Meeda is derived from words such as MEMO, Ethereum, and data availability, and it works in conjunction with Mooda, the Bitcoin data availability solution launched by Memolabs, with the first two letters together forming MEMO.
-
-Meeda stores blob data off-chain, with the index used to retrieve data and the proof of commitment to data availability stored on-chain. While ensuring data availability, it also reduces on-chain synchronization and storage overhead, maximizing the scalability of the blockchain. Meeda is compatible with any Optimistic-type Layer2 chains, providing reliable data availability protection. Meeda relies on on-chain verification,持续性证明, and redundancy mechanisms to ensure data availability.
-
-+ Mooda
-Mooda stores data in decentralized storage off-chain and places the storage vouchers and verification information on the Bitcoin blockchain. Verification nodes can always obtain verification information and storage vouchers from the chain to verify the existence of data in storage.
-
-Mooda consists of three parts: the storage verification layer, Bitcoin blocks, and the indexer. Mooda stores user data in decentralized storage off-line and places the proof of storage and verification information on the Bitcoin chain, using the indexer to obtain and verify the verification information on the chain.
-
-Mooda achieves sustainable verification by periodically submitting proofs to the blockchain. To prevent the storage proof layer from using the same proof, a random number is selected each cycle to participate in the generation of the proof.
-
-### MEMO Storage Infrastructure
-
-#### MEFS Design Background
+### MEFS Design Background
 
 In the era of the information explosion that we are now in, tens of thousands of documents, photos, videos and other data files are generated every day in the world. However, traditional centralized storage methods have become increasingly unable to meet market demand. It is expensive, and the second reason is that the security is not high enough, so blockchain distributed storage came into being. Compared with traditional centralized storage, blockchain distributed storage is the use of idle electronic devices scattered around the world, such as idle mobile phones, computers, hard disks, etc., which can all be used as edge storage nodes. The typical characteristics of blockchain decentralized storage are decentralization , higher security, and low cost, which has attracted the attention of global capital and technology circles.
 
 At present, the blockchain decentralized storage technology is still in the stage of continuous exploration. After continuous efforts, MEMOlab has developed a new generation of blockchain-based decentralized cloud storage system MEMO. Compared with the traditional blockchain, MEMO adopts a more concise and efficient technical processing method to protect the keeper, provider, and user information and data, thereby ensuring the cost-effectiveness of the entire storage system and enabling users to obtain better use Experience.
 
-#### Advangages of MEFS
+### Advangages of MEFS
 
 **Decentralized storage.** After the user uploads the source file, the Memo system can distribute the data to multiple storage nodes and provide a unified standardized interface to the outside world. When the target user initiates a download request, the nearest node downloads the fragments by the nearest node and provides them to the user completely. Multiple images or copies are provided throughout the network, which greatly improves the access speed and stability.
 
@@ -66,11 +40,11 @@ At present, the blockchain decentralized storage technology is still in the stag
 
 MEMO is a blockchain-based decentralized cloud storage system. It's unlike some projects aiming at producing blocks whose storage data volume is directly linked to the calculation power of blocks; it is also different from pseudo-decentralized distributed storage projects, one of whose nodes or several usually undertake the function of 'centralized nodes'.
 
-#### DESIGN INTENTION
+### DESIGN INTENTION
 
 Since the distributed cloud storage system is deployed in a low-trust P2P network, there is no centralized third-party organization responsible for management, and the storage devices are mostly idle edge devices for users, not proprietary storage servers. Therefore, for this application scenario, the decentralized cloud storage management system first faces system management problems, which are divided into system role management, storage market management, data maintenance management, etc., and these management requirements are ultimately the use of smart contracts Therefore, the management problem of smart contracts must also be solved.
 
-##### 1.System role management: Solve the problem of role division
+#### 1.System role management: Solve the problem of role division
 
 According to the needs of storage scenarios and functions, users in a distributed cloud storage system are divided into three categories. These three types of users are defined as user,provider, and keeper. Their functions in the system are as follows:
 
@@ -80,13 +54,13 @@ According to the needs of storage scenarios and functions, users in a distribute
 
 **Provider:** Provides storage space, specifically: Provides storage space for User, saves User's data, and is the provider of storage services in the system.
 
-##### 2.Storage market management: Solve the problem of how to implement storage services
+#### 2.Storage market management: Solve the problem of how to implement storage services
 
 The key application of MEMO is storage service, so storage market management is essential. With the help of Keeper, User finds a suitable Provider. The Provider provides space and time for storing data. Keeper challenges the Provider that stores data on a regular basis. If a Provider challenge is found to fail, the data repair function needs to be triggered. Download from Provider when a user need data. According to this application scenario, the user needs to pay the storage fee and download the data fee to the Provider, and pay the coordination management fee to the Keeper.
 
 If a user violates the storage rules, such as damaging data and refusing to repair, etc., a corresponding penalty mechanism is needed to maintain the normal operation of the system. How does Keeper match between User and Provider; how to pay according to the price after the storage service is established; how to solve the problem when faced with a user's request to download data. These problems are collectively referred to as the needs of storage market management, and MEMO has designed a storage duration management solution for this purpose.
 
-##### 3.Data maintenance management-solve data maintenance problems
+#### 3.Data maintenance management-solve data maintenance problems
 
 Distributed cloud storage systems face the need for data maintenance and management. User’s data is stored on the selected Provider in the form of object storage, and the corresponding Keeper will challenge to ensure that the Keeper saves the data completely and correctly. However, this mechanism lacks trustworthiness, and all Keepers facing the same User may act dishonestly and provide false challenge results.
 
@@ -94,13 +68,13 @@ In addition, the user's metadata information is stored on the corresponding Keep
 
 In order to maintain data security and integrity, various mainstream cryptographic technologies, such as symmetric encryption and decryption , anti-collision hash function and digital signature technology , are applied to meet strict data privacy and integrity requirements. Cryptography technology,data redundancy and repair technology will provide the system with sufficient flexibility to tolerate various possible software and hardware failures and small-scale malicious attacks, such as attempts to invade maintenance, storage and user equipment, thereby tampering, destroying, or Disclosure of data and information. At the same time, MEMO uses proven POW and more innovative POS technology, supplemented by third-party security tools to further enhance system security.
 
-#### SMART CONTRACT
+### SMART CONTRACT
 
 One of the key issues in building a large-scale decentralized storage system is the efficient management of system roles and their relationships. In a distributed cloud storage system, according to different roles, the functions provided are different, and role information needs to be saved to determine the identity of the user to provide corresponding functions. The traditional method is to save the user's role, address and other information in the database, which is managed by the specific company. In the decentralized scenario, according to the characteristics of the account address that uniquely identifies users, smart contracts are used to manage system role information.
 
 As mentioned above, the system has requirements for role management, storage market management, data maintenance and management, and these requirements ultimately need to be realized by smart contracts. Therefore, smart contract management is the basis for the realization of the above three types of management requirements. Contract management will The operation of the entire system runs through.
 
-##### How to call the smart contract?
+#### How to call the smart contract?
 
 After the smart contract is deployed, the user needs to use the contract instance to be able to call the methods in the contract. The contract instance can be constructed by the contract address. For some contract functions that need to change the state on the chain, a specific user identity is required to be able to call; and for those contract functions that obtain the state information on the chain, any user can call. Therefore, the system has management problems such as storage and acquisition of contract addresses.
 
@@ -112,7 +86,7 @@ Different roles have different functions, and role information also needs to be 
 
 Requirement analysis is the prerequisite for design and implementation. Based on the above management needs, MEMO has designed multiple modules to solve the problems of role division, storage service implementation data maintenance, and contract invocation. These are the solid cornerstones of the MEMO system.
 
-#### ROLES
+### ROLES
 
 In the MEMO distributed cloud storage system, each user can register a role according to his own needs. The system roles include User, Keeper, and Provider. If it is a storage demander, it is registered as a User; if it is a device provider, it is registered as a Provider; if it only provides information management services, it is registered as a Keeper. This article will explain the design principles of each role from the perspective of overall system operation.
 
@@ -126,7 +100,7 @@ The basic roles of the three parties are as follows:
 
 Among these three roles, User and Provider are the supply and demand parties of storage services, and User is also the end user in the system. In short, User uses storage space in the MEMO system, Keeper finds a suitable storage node for User, and storage node Provider stores data for User. Keeper is equivalent to an intermediate information matchmaker, providing intermediary services for users and providers. We can understand Keeper as a headhunter on a recruitment platform or an intermediary in a real estate trading platform.
 
-##### User
+#### User
 
 Since the end user in the system is the User, it needs to pay the corresponding storage fee for the storage service, so every service request is initiated by the User.
 
@@ -138,7 +112,7 @@ The Users not only need to pay for storage services, but when they need to downl
 
 Since the User is the ultimate payer, the system does not set special restrictions for this role, because if the User does not pay, the Provider and Keeper will stop the service. But for the other two roles, Provider and Keeper, the system has set corresponding punishment measures for them, which will be discussed below.
 
-##### Keeper
+#### Keeper
 
 Keeper is an important intermediate role in the system. It assumes information intermediary and management functions, and extracts management commissions from the storage fees paid by the User.
 
@@ -170,7 +144,7 @@ The penalties for breach of the Keeper mentioned above. For Provider, the system
 
 Therefore, for the Provider role, it is also necessary to pledge a fee when applying for the role. Once the Provider violates the system rules, the system will trigger the corresponding penalty to deduct the pledge deposit amount.
 
-#### Penalty contract deployer:third-party contract manager Admin
+### Penalty contract deployer:third-party contract manager Admin
 
 From the perspective of system design, each role can gain something in the MEMO system. Since User is the ultimate consumer, and the punishment measures are mainly for the collection role, that is, for Keeper and Provider, the realization of system role functions and the interaction between roles are realized through smart contracts, so the punishment is also realized by smart contracts. of.
 
@@ -178,11 +152,11 @@ The reason for adopting the contract-based penalty mechanism is: a decentralized
 
 With the help of these advantages of smart contracts, the penalty mechanism for Provider and Keeper can be specified in the contract in advance. For the problem of who triggers the pledge deduction function of smart contracts, the available solutions are: triggered by User; triggered by Keeper; triggered by other Providers; or triggered by the role contract deployer.It is inappropriate for any role in the system to trigger the deduction of the pledge function of Provider and Keeper. The reason is that the three of them are related to each other in a storage service.Provider obtains revenue by storing data for User, and Keeper obtains revenue by helping User challenge verification data and collect information.Therefore, the power to trigger the deduction of pledge function should be transferred to an unrelated third party, that is, the role contract deployer, here called the contract manager Admin. The Admin deploys the penalty contract, which is also one of the checks and balances designed by the MEMO system to achieve fair transactions.
 
-#### Node matching of MEMO FileSystem
+### Node matching of MEMO FileSystem
 
 The core application of the MEMO system is a decentralized blockchain. In order to achieve fair transactions in a low-credibility environment, the system has designed corresponding functions for each role, storage demander (User), storage coordinator (Keeper), storage provider（Provider） providers interact with each other to form a system ecosystem. This article will elaborate on the node matching of the MEMO system, that is, how does the User find a Provider that provides storage services for himself?
 
-##### User's demand parameter setting
+#### User's demand parameter setting
 
 User is the final consumer of the system. Every storage service is initiated by User, and then Keeper and Provider provide services for it. In the role design article, we have mentioned that when the User proposes storage service requirements, the following elements should be included: storage space size, storage duration, and the number of providers and keepers.
 
@@ -190,7 +164,7 @@ Storage space size and storage duration are the most basic parameters. As for wh
 
 Similarly, because Keeper needs to challenge the Provider in time and space, that is, through data verification technology, to check how much data the Provider correctly stores and the storage duration, multiple Keepers agree on the challenge result, and the consensus result serves as the basis for paying for the Provider's stored data.The number of Keepers will affect this storage service. The reason is: the more Keepers, the higher the cost of falsifying the challenge results, and the lower the probability that all Keepers are offline.
 
-##### User's other parameter settings: reputation value, price
+#### User's other parameter settings: reputation value, price
 
 When the User proposes storage requirements, in addition to the basic parameters of storage space, storage duration, and the number of Providers and Keepers, some other parameters may also be set according to specific usage scenarios.
 
@@ -202,7 +176,7 @@ In addition, the system should provide the Users with the function of specifying
 
 In summary, the parameters that Users need to specify when seeking storage services include storage space size, storage duration, storage unit price, Keeper parameter requirements (such as the number of Keepers), and Provider parameter requirements (such as the number of Providers).
 
-##### Smart contract matching
+#### Smart contract matching
 
 After the User sets the required parameters, Keeper will find the Provider connected to it according to the User's storage service requirements, and match the appropriate storage node. The specific situation of the matching operation is: after the Provider goes online, explain your own storage situation, which should include: available storage space, storage duration, and required storage unit price.Therefore, Keeper matches according to the situation of both parties, and then sends the matched Provider information to the User. Thus, User, Keepers, and Providers form a storage service.
 
