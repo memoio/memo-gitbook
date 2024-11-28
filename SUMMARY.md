@@ -2,78 +2,78 @@
 
 * **OVERVIEW**
 
-  * [Introducing MEMO](docs-cn/Introduction.md)
+  * [Introducing MEMO](docs/Introduction.md)
 
 * **MEMO PROTOCOL**
   
-  * [User-Centric Data Layer](docs-cn/memo-protocol/Data-Layer.md)
+  * [User-Centric Data Layer](docs/memo-protocol/Data-Layer.md)
 
   * MEMO Protocol
   
-    * [Data Storage Layer](docs-cn/memo-protocol/protocol/Data-Storage-Layer.md)
+    * [Data Storage Layer](docs/memo-protocol/protocol/Data-Storage-Layer.md)
 
-    * [Verification Layer](docs-cn/memo-protocol/protocol/Verification-Layer.md)
+    * [Verification Layer](docs/memo-protocol/protocol/Verification-Layer.md)
 
-    * [Computation & Training Layer](docs-cn/memo-protocol/protocol/Computation-Training-Layer.md)
+    * [Computation & Training Layer](docs/memo-protocol/protocol/Computation-Training-Layer.md)
   
-    * [Identity Layer](docs-cn/memo-protocol/protocol/Identity-Layer.md)
+    * [Identity Layer](docs/memo-protocol/protocol/Identity-Layer.md)
 
-    * [Execution Layer](docs-cn/memo-protocol/protocol/Execution-Layer.md)
+    * [Execution Layer](docs/memo-protocol/protocol/Execution-Layer.md)
 
-    * [Proxy Layer](docs-cn/memo-protocol/protocol/Proxy-Layer.md)
+    * [Proxy Layer](docs/memo-protocol/protocol/Proxy-Layer.md)
 
   * Key Features
 
-    * [User-Centric](docs-cn/memo-protocol/feature/User-Centric.md)
+    * [User-Centric](docs/memo-protocol/feature/User-Centric.md)
 
-    * [Decentralized Identity(DID)](docs-cn/memo-protocol/feature/DID.md)
+    * [Decentralized Identity(DID)](docs/memo-protocol/feature/DID.md)
 
-    * [Data Availability(DA)](docs-cn/memo-protocol/feature/DA.md)
+    * [Data Availability(DA)](docs/memo-protocol/feature/DA.md)
 
-    * [Data Assets](docs-cn/memo-protocol/feature/Data-Assets.md)
+    * [Data Assets](docs/memo-protocol/feature/Data-Assets.md)
 
   * Getting Started
 
-    * [Become Storage Provider](docs-cn/memo-protocol/getting-started/Storage-Provider.md)
+    * [Become Storage Provider](docs/memo-protocol/getting-started/Storage-Provider.md)
 
-    * [Use Data Management Services](docs-cn/memo-protocol/getting-started/Data-Management.md)
+    * [Use Data Management Services](docs/memo-protocol/getting-started/Data-Management.md)
 
-    * [Apply for DID](docs-cn/memo-protocol/getting-started/DID.md)
+    * [Apply for DID](docs/memo-protocol/getting-started/DID.md)
 
-    * [Apply for computing Resources](docs-cn/memo-protocol/getting-started/HashRate.md)
+    * [Apply for computing Resources](docs/memo-protocol/getting-started/HashRate.md)
 
-    * [Use Data Availability Services](docs-cn/memo-protocol/getting-started/DA.md)
+    * [Use Data Availability Services](docs/memo-protocol/getting-started/DA.md)
 
-    * [Simplify Interaction with dApps](docs-cn/memo-protocol/getting-started/Proxy.md)
+    * [Simplify Interaction with dApps](docs/memo-protocol/getting-started/Proxy.md)
 
-    * [Smart Contract Address](docs-cn/memo-protocol/getting-started/Smart-Contract-Address.md)
+    * [Smart Contract Address](docs/memo-protocol/getting-started/Smart-Contract-Address.md)
 
 * **TOKENOMICS**
   
-  * [MEMO & Deposit](docs-cn/tokenomics/Memo-Deposit.md)
+  * [MEMO & Deposit](docs/tokenomics/Memo-Deposit.md)
   
-  * [Distribution](docs-cn/tokenomics/Distribution.md)
+  * [Distribution](docs/tokenomics/Distribution.md)
 
 * **ECOSYSTEM**
 
-  * [MEFS](docs-cn/ecosystem/MEFS.md)
+  * [MEFS](docs/ecosystem/MEFS.md)
 
-  * [Data Wallet](docs-cn/ecosystem/Data-Wallet.md)
+  * [Data Wallet](docs/ecosystem/Data-Wallet.md)
 
-  * [Data Trading Market](docs-cn/ecosystem/Data-Trading-Market.md)
+  * [Data Trading Market](docs/ecosystem/Data-Trading-Market.md)
 
-  * [Computing Power Platform](docs-cn/ecosystem/Computing-Power-Platform.md)
+  * [Computing Power Platform](docs/ecosystem/Computing-Power-Platform.md)
   
-  * [Meeda & Mooda](docs-cn/ecosystem/Meeda&Mooda.md)
+  * [Meeda & Mooda](docs/ecosystem/Meeda&Mooda.md)
 
-  * [BRC985](docs-cn/ecosystem/BRC985.md)
+  * [BRC985](docs/ecosystem/BRC985.md)
 
-  * [ERC3130](docs-cn/ecosystem/ERC3130.md)
+  * [ERC3130](docs/ecosystem/ERC3130.md)
 
 * **FAQ**
 
-  * [FAQ](docs-cn/faq/FAQ.md)
+  * [FAQ](docs/faq/FAQ.md)
 
 * **COMMUNITY**
 
-  * [Community](docs-cn/community/resource.md)
+  * [Community](docs/community/resource.md)
