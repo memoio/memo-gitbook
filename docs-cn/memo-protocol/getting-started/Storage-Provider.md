@@ -1,90 +1,88 @@
-# Start Provider
+# 启动Provider
 
-## Docker
+## Docker方式启动Provider的步骤
 
-### Step by step
+### 第 1 步：Docker 环境准备
 
-### Step 1: Docker Environment Preparation
-
-Confirm Docker is running after install.
+安装后确认 Docker 正在运行。
 
 ```shell
 service docker start
 ```
 
-### Step 2: Set up the home directory
+### 第 2 步：设置主目录
 
-Set node home directory:
+设置节点主目录：
 
-Using "~/memo_provider" as an example:
+以 "~/memo_provider" 为例：
 
 ```shell
 export MEFS_PATH=~/memo_provider
 ```
 
-Set node data storage directory:
+设置节点数据存储目录：
 
-~/memo_provider_data as an example:
+以 ~/memo_provider_data 为例：
 
 ```shell
 export MEFS_DATA=~/memo_provider_data
 ```
 
-The home directory contains config file and other files for running a node, the storage directory is where data is stored.
+主目录包含配置文件和其他运行节点所需的文件，存储目录是数据存储的位置。
 
-### Step 3: Pull image (provider)
+### 第 3 步：拉取镜像（提供者）
 
 ```shell
 docker pull memoio/mefs-provider:latest
 ```
 
-### Step 4: Initialization（Create new wallet）
+### 第 4 步：初始化（创建新钱包）
 
-Execute the initialize command, which will generate your wallet address and generate a configuration file.
+执行初始化命令，这将生成您的钱包地址并生成配置文件。
 
 ```shell
 docker run --rm -v $MEFS_PATH:/root --entrypoint mefs-provider memoio/mefs-provider:latest init --password=memoriae
 ```
 
-Explanation of arguments:
+参数解释：
 
---password： Enter your provider password, the default is memoriae.
+--password：输入您的提供者密码，默认为memoriae。
 
-### Step 5: Check wallet address
+### 第 5 步：检查钱包地址
 
 ```shell
 docker run --rm -v $MEFS_PATH:/root --entrypoint mefs-provider memoio/mefs-provider:latest wallet default
 ```
 
-Explanation of arguments:
+参数解释：
 
-wallet default: Get the default wallet address
+wallet default：获取默认钱包地址
 
-### Step 6: Top up
+### 第 6 步：充值
 
-Starting node needs both the Memo and cMemo token.
+启动节点需要 Memo 和 cMemo 两种代币。
 
-To get the cMemo token,  there is one faucet,  <https://faucet.metamemo.one/>
+获取 cMemo 代币，有一个水龙头：<https://faucet.metamemo.one/>
 
-This is the MemoChain information.  
+以下是 MemoChain 信息。
 
-Memochain information
+MemoChain 信息
 
-Chain RPC: <https://chain.metamemo.one:8501/>
+链 RPC：<https://chain.metamemo.one:8501/>
 
-Currency name: CMEMO
+货币名称：CMEMO
 
-Chain ID: 985
+链 ID：985
 
-Chain browser: <https://scan.metamemo.one:8080/>
+链浏览器：<https://scan.metamemo.one:8080/>
 
-To get Memo Tokens for your wallet, you can transfer some Memo Tokens from other wallet address which has enough Memo Tokens. The provider needs minimum 30 Memo Tokens.
+要为您的钱包获取 Memo 代币，您可以从其他拥有足够 Memo 代币的钱包地址转账一些 Memo 代币。提供者至少需要 30 个 Memo 代币。
 
-Join our discussing with Slack Link:
+加入我们的讨论，请使用 Slack 链接：
 
-[Slack Link](https://join.slack.com/t/memo-nru9073/shared_invite/zt-sruhyryo-suc689Nza3z8boa4JkaLqw)
+Slack 链接
 
-### Step 7: Modify the configuration file
+### 第 7 步：修改配置文件
 
 ```shell
 docker run --rm -v $MEFS_PATH:/root --entrypoint mefs-provider memoio/mefs-provider:latest config set --key=contract.version --value=3
@@ -94,186 +92,181 @@ docker run --rm -v $MEFS_PATH:/root --entrypoint mefs-provider memoio/mefs-provi
 docker run --rm -v $MEFS_PATH:/root --entrypoint mefs-provider memoio/mefs-provider:latest config set --key=contract.roleContract --value="0xbd16029A7126C91ED42E9157dc7BADD2B3a81189"
 ```
 
-### Step 8: Start node
+### 第 8 步：启动节点
 
 ```shell
 docker run -d -p 4001:4001 -v $MEFS_PATH:/root -v $MEFS_DATA:/root/data -e PASSWORD="memoriae" -e PRICE=250000 -e GROUP=3 -e SWARM_PORT=4001 -e DATA_PATH=/root/data --name mefs-provider memoio/mefs-provider:latest
 ```
 
-- Please make sure your provider home directory and password are the same as in the previous step.
-
-If there is any deploy issue.  Please join the deploy-node discussing with Slack Link:
+请确保您的提供者主目录和密码与前一步相同。
+如果有任何部署问题，请加入部署节点讨论，使用 Slack 链接：
 
 [Slack Link](https://join.slack.com/t/memo-nru9073/shared_invite/zt-sruhyryo-suc689Nza3z8boa4JkaLqw)
 
-## Checking the running status
+## 检查运行状态
 
-### Step 1: Enter the docker container
+### 第 1 步：进入 docker 容器
 
 ```shell
 docker exec -it mefs-provider bash
 ```
 
-- After entering the container, you can use the mefs-provider command to perform operations.
+进入容器后，您可以使用 mefs-provider 命令执行操作。
 
-### Step 2: Check provider information
+### 第 2 步：检查提供者信息
 
 ```shell
 mefs-provider info
 ```
 
 ```shell
------------ Information -----------
+----------- 信息 -----------
 
-2022-03-23 16:44:19 CST #Current time
+2022-03-23 16:44:19 CST #当前时间
 
-2.1.0-alpha+git.86acc04+2022-03-22.14:17:54CST #mefs-provider version information
+2.1.0-alpha+git.86acc04+2022-03-22.14:17:54CST #mefs-provider 版本信息
 
------------ Network Information -----------
+----------- 网络信息 -----------
 
 ID: 12D3KooWR74K1v6naGUAjHRrkakxVS88h4X93bMnquoRiEDdLJTx
 
-IP: [/ip4/10.xx.xx.xx/tcp/8003] #The current node network information, 8003 is the swarm-port port, used for node communication
+IP: [/ip4/10.xx.xx.xx/tcp/8003] #当前节点网络信息，8003 是 swarm-port 端口，用于节点通信
 
-Type: Private
+类型：私有
 
-Declared Address: {12D3KooWR74K1v6naGUAjHRrkakxVS88h4X93bMnquoRiEDdLJTx: [/ip4/10.xx.xx.xx/tcp/8003]}
+声明地址：{12D3KooWR74K1v6naGUAjHRrkakxVS88h4X93bMnquoRiEDdLJTx: [/ip4/10.xx.xx.xx/tcp/8003]}
 
------------ Sync Information -----------
+----------- 同步信息 -----------
 
-Status: true, Slot: 323608, Time: 2022-03-23 16:44:00 CST #Please check if your sync status is true, if it is false, please check your node network
+状态：true, 插槽：323608, 时间：2022-03-23 16:44:00 CST #请检查您的同步状态是否为 true，如果不是，请检查您的节点网络
 
-Height Synced: 3363, Remote: 3363 #sync status
+同步高度：3363, 远程：3363 #同步状态
 
-Challenge Epoch: 23 2022-03-23 11:56:30 CST
+挑战时代：23 2022-03-23 11:56:30 CST
 
------------ Role Information -----------
+----------- 角色信息 -----------
 
-ID: 30
+ID：30
 
-Type: Provider
+类型：提供者
 
-Wallet: 0x749573E11C18A0f5Eb53248382588e2064E0Af80
+钱包：0x749573E11C18A0f5Eb53248382588e2064E0Af80
 
-Balance: 999.87 Gwei (tx fee), 0 AttoMemo (Erc20), 493586.64 NanoMemo (in fs)
+余额：999.87 Gwei (交易费), 0 AttoMemo (Erc20), 493586.64 NanoMemo (在 fs)
 
-Data Stored: size 57647104 byte (54.98 MiB), price 56750000
+已存储数据：大小 57647104 字节 (54.98 MiB), 价格 56750000
 
------------ Group Information -----------
+----------- 群组信息 -----------
 
-EndPoint: http://119.xx.xx.xx:8191
+EndPoint：http://119.xx.xx.xx:8191 
 
-Contract Address: 0xCa3C4103bd5679F43eC9E277C2bAf5598f94Fe6D
+合约地址：0xCa3C4103bd5679F43eC9E277C2bAf5598f94Fe6D
 
-Fs Address: 0xFB9FF26EB4093aa8fFf762F2dF4E61d3A7532Af9
+Fs 地址：0xFB9FF26EB4093aa8fFf762F2dF4E61d3A7532Af9
 
-ID: 1 #group id
+ID：1 #群组 ID
 
-Security Level: 7
+安全等级：7
 
-Size: 109.95 MiB
+大小：109.95 MiB
 
-Price: 113500000
+价格：113500000
 
-Keepers: 10, Providers: 16, Users: 4
+守护者：10, 提供者：16, 用户：4
 
------------ Pledge Information ----------
+----------- 质押信息 ----------
 
-Pledge: 1.00 Memo, 26.00 Memo (total pledge), 26.00 Memo (total in pool) 
+质押：1.00 Memo, 26.00 Memo (总质押), 26.00 Memo (池中总额) 
 ```
 
-### Step 3: Declare
+### 第 3 步：声明
 
-• When participating as a provider node, you need to execute the declare command (declare the public network address) for communication between nodes;
+• 当作为提供者节点参与时，您需要执行声明命令（声明公共网络地址）以实现节点间通信；
 
-• Get your public network ip+port ready, I will show you below;
+• 准备好您的公共网络 ip+端口，我将在下面展示；
 
-• Note: Execute the command in the container;
+• 注意：在容器内执行命令；
 
-• The command mefs-provider info can only be executed after the sync information displays as true. Although the synchronization can be successful without doing so, it will not be able to communicate with other nodes.
+• mefs-provider info 命令只有在同步信息显示为 true 后才能执行。尽管不执行此操作也可以成功同步，但将无法与其他节点通信。
 
 ```shell
 mefs-provider net declare /ip4/X.X.X.X/tcp/4007
 ```
 
-**Parameter explanation**
+参数解释
 
-X.X.X.X is your public ip address.
+X.X.X.X 是您的公共 ip 地址。
 
-Port 4007 is your public network port, and the mapped port is the host's port 4001 (-p 4001: the first port 4001 of the boot parameter).​
+端口 4007 是您的公共网络端口，映射端口是主机的端口 4001（-p 4001：启动参数中的第一个端口 4001）。​​
 
-## Check network status
+## 检查网络状态
 
-**Get local node network information**
+### 获取本地节点网络信息
 
-Command description: Enter command net info to view the network id (cid), ip address and port of the current node.
+命令说明：输入命令 net info 查看当前节点的网络 id (cid)、ip 地址和端口。
 
 ```shell
 mefs-provider net info
 ```
 
 ```shell
-Network ID 12D3Koo2BpPPzk9srHVVU4kkVF1RPJi9nYNgV4e6Yjjd4PGr5q1k, IP [/ip4/10.xx.xx.xx/tcp/18003], Type: Private 
-```
+网络 ID 12D3Koo2BpPPzk9srHVVU4kkVF1RPJi9nYNgV4e6Yjjd4PGr5q1k, IP [/ip4/10.xx.xx.xx/tcp/18003], 类型：私有
+获取节点的网络连接信息
 
-**Get the network connection information of the node**
-
-Command description: Enter command net peers to view the network connection information of the current node.
+命令说明：输入命令 net peers 查看当前节点的网络连接信息。
 
 ```shell
 mefs-provider net peers
-```
-
-```shell
+shell
 12D3KooWMrZTqoU8febMxxxxxxxxxCeqLQy1XCU9QcjP1YWAXVi [/ip4/10.xx.xx.xx/tcp/8003]
 
 12D3KooWC2PmhSrU1VexxxxxxxxxtwvQuFZj3vPfjdfebAuJQtc [/ip4/10.xx.xx.xx/tcp/8004]
 
 12D3KooWR74K1v6naGxxxxxxxxxVS88h4X93bMnquoRiEDdLJTx [/ip4/10.xx.xx.xx/tcp/8003]
 
-12D3KooWSzzwJ7es1xxxxxxxxxPaqei3TUHnNZDmWTELSA7NJXQ [/ip4/10.xx.xx.xx/tcp/18003]
+12D3KooWSzzwJ
+
+7es1xxxxxxxxxPaqei3TUHnNZDmWTELSA7NJXQ [/ip4/10.xx.xx.xx/tcp/18003]
 
 12D3KooWG8PjbbN9xxxxxxxxx2oYFtjeQ8XnqvnEqfrB4AiW7eJ [/ip4/10.xx.xx.xx/tcp/8003]
 
 12D3KooWRjamwQtxxxxxxxxxb44AAXLNy9CB7u1FL2eC5QZekpF [/ip4/1.xx.xx.xx/tcp/24071]
 
-... 
+...
 ```
 
-**Connect to a specified node**
+### 连接到指定节点
 
-Command description: Enter command net connect to connect to any node; if there is any problem with your node network, please enter command net connect to connect to our public node.
+命令说明：输入命令 net connect 连接到任何节点；如果您的节点网络有任何问题，请输入命令 net connect 连接到我们的公共节点。
 
 ```shell
 mefs-provider net connect /ip4/10.2.x.x/tcp/8004/p2p/12D3KooWAykMmqu952ziotQiAYTN6SwfvBd1dsejSSak2jdSwryF
 ```
 
-## COMMON MISTAKES
+## 常见错误及解决办法
 
-### ERROR 1
+### 错误 1
 
-not have tx fee on chain
+没有链上的交易费
 
-Solution:
+解决方案：
 
-Check the node, both of the cMemo token balance, and the memo balance. The Memo token balance must meet the minimum amount for node startup.
+检查节点，cMemo 代币余额和 memo 余额。Memo 代币余额必须满足节点启动的最低金额。
 
-### ERROR 2
+### 错误 2
 
-execution reversed: can't unpledge during 180d
+执行反转：在 180 天内不能取消质押
 
-Solution:
+解决方案：
 
-The node pledge amount needs to be withdrawn 180 days after the last pledge.
+节点质押金额需要在最后一次质押后 180 天才能提取。
 
-### ERROR 3
+### 错误 3
 
-If the log reports that the meta and state files are missing, you can perform the Recover operation.
+如果日志报告元数据和状态文件丢失，您可以执行恢复操作。
 
-Solution:
+解决方案：
 
 mefs-provider recover db --path /home/mcloud/provider2/.memo-provider/meta
 
 mefs-provider recover db --path /home/mcloud/provider2/.memo-provider/state
-
-## 
