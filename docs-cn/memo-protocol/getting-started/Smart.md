@@ -1,4 +1,4 @@
-# Proxy
+# Smart
 
 ## 编译源码
  
@@ -16,7 +16,5 @@ make all
 ```
 
 
-## API
 
-### Challenge
 
