@@ -36,10 +36,9 @@ Meeda
 
 Meeda（取MEMO的前两个字母、Ethereum的第一个字母以及数据可用性的缩写DA）是一套针对以太坊生态的数据可用性解决方案，为以太坊Layer2提供低成本、高安全的数据存储和证明服务。
 
-EthDrive & LensDrive
+DataDrive
 
-EthDrive旨在为Web3应用程序提供高安全性、高容量和用户友好的功能。它基于MEMO的去中心化存储系统MEFS构建，利用区块链技术来确保数据隐私、可靠性和用户所有权。
-LensDrive专为 Lens 去中心化社交生态而设计，它结合了文件备份、预览、分享等功能，旨在为 Web3 用户提供安全、私密、高效的数据存储服务。LensDrive 利用了 MEFS分散式云存储系统，确保用户数据的加密存储，同时支持多身份管理，满足个人和企业用户的多样化需求。
+MEMO的DataDrive包含Drive3、EthDrive和LensDrive，旨在为Web3应用程序提供高安全性、高容量和用户友好的功能。它基于MEMO的去中心化存储系统MEFS构建，利用区块链技术来确保数据隐私、可靠性和用户所有权。LensDrive专为 Lens 去中心化社交生态而设计，它结合了文件备份、预览、分享等功能，旨在为 Web3 用户提供安全、私密、高效的数据存储服务。Drive3和EthDrive具有更加普遍的适用性。
 
 数据钱包（Data Wallet）
 

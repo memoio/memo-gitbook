@@ -36,10 +36,9 @@ Meeda
 
 Meeda (the first two letters of MEMO, the first letter of Ethereum and the abbreviation DA for data availability) is a data availability solution for the Ethereum ecosystem, providing low-cost, highly secure data storage and proof services for Ethereum Layer2.
 
-EthDrive & LensDrive
+DataDrive
 
-EthDrive is designed to provide high security, high capacity and user-friendly features for Web3 applications. It is built on MEFS, a decentralized storage system of MEMO, and uses blockchain technology to ensure data privacy, reliability and user ownership.
-LensDrive is designed for the Lens decentralized social ecosystem. It combines file backup, preview, sharing and other functions to provide Web3 users with secure, private and efficient data storage services. LensDrive uses the MEFS decentralized cloud storage system to ensure the encrypted storage of user data, while supporting multi-identity management to meet the diverse needs of individual and corporate users.
+MEMO's DataDrive includes Drive3, EthDrive, and LensDrive, which are designed to provide high security, high capacity, and user-friendly features for Web3 applications. It is built on MEMO's decentralized storage system MEFS, using blockchain technology to ensure data privacy, reliability, and user ownership. LensDrive is designed for the Lens decentralized social ecosystem. It combines file backup, preview, sharing and other functions to provide Web3 users with secure, private, and efficient data storage services. Drive3 and EthDrive have more universal applicability.
 
 Data Wallet
 
