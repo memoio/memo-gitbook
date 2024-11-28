@@ -32,10 +32,9 @@ MEFS
 
 MEFS is the first decentralized storage system based on blockchain, using idle edge storage devices to provide users with low-cost, privacy-protected, and highly reliable storage services.
 
-Meeda & Mooda
+Meeda
 
-Meeda is a data availability solution for the Ethereum ecosystem, providing low-cost, highly secure data storage and proof services for Ethereum Layer2.
-Mooda focuses on efficient Bitcoin data availability, aiming to solve the challenges of data storage and retrieval in the Bitcoin ecosystem by leveraging modular methods and blockchain technology.
+Meeda (the first two letters of MEMO, the first letter of Ethereum and the abbreviation DA for data availability) is a data availability solution for the Ethereum ecosystem, providing low-cost, highly secure data storage and proof services for Ethereum Layer2.
 
 EthDrive & LensDrive
 
