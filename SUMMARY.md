@@ -14,7 +14,7 @@
   
   * [Data Storage Layer](docs/memo-protocol/protocol/Data-Storage-Layer.md)
 
-  * [Computation & Training Layer](docs/memo-protocol/protocol/Computation-Training-Layer.md)
+  * [Computation Layer](docs/memo-protocol/protocol/Computation-Layer.md)
 
   * [Verification Layer](docs/memo-protocol/protocol/Verification-Layer.md)
 
@@ -22,7 +22,7 @@
 
   * [Identity Layer](docs/memo-protocol/protocol/Identity-Layer.md)
 
-  * [Smart Layer](docs/memo-protocol/protocol/Proxy-Layer.md)
+  * [Smart Layer](docs/memo-protocol/protocol/Smart-Layer.md)
 
 * [Key Features](docs/memo-protocol/feature/README.md)
 
@@ -42,11 +42,11 @@
 
   * [Apply for DID](docs/memo-protocol/getting-started/DID.md)
 
-  * [Apply for computing Resources](docs/memo-protocol/getting-started/HashRate.md)
+  * [Apply for computing Resources](docs/memo-protocol/getting-started/HashCashPoW.md)
 
   * [Use Data Availability Services](docs/memo-protocol/getting-started/DA.md)
 
-  * [Simplify Interaction with dApps](docs/memo-protocol/getting-started/Proxy.md)
+  * [Simplify Interaction with dApps](docs/memo-protocol/getting-started/Smart.md)
 
   * [Smart Contract Address](docs/memo-protocol/getting-started/Smart-Contract-Address.md)
 
@@ -68,9 +68,7 @@
   
 * [Meeda](docs/ecosystem/Meeda.md)
 
-* [BRC985](docs/ecosystem/BRC985.md)
-
-* [ERC3130](docs/ecosystem/ERC3130.md)
+* [ERC7921](docs/ecosystem/ERC7921.md)
 
 ## FAQ
 
