@@ -1,79 +1,79 @@
-# Summary
+# Table of contents
 
-* **OVERVIEW**
+* [Welcome](README.md)
 
-  * [Introducing MEMO](docs-cn/Introduction.md)
+## OVERVIEW
 
-* **MEMO PROTOCOL**
+* [Introducing MEMO](docs/Introduction.md)
+
+## MEMO PROTOCOL
   
-  * [User-Centric Data Layer](docs-cn/memo-protocol/Data-Layer.md)
+* [Modular Layer](docs/memo-protocol/Modular-Layer.md)
 
-  * MEMO Protocol
+* [MEMO Protocol](docs/memo-protocol/protocol/README.md)
   
-    * [Data Storage Layer](docs-cn/memo-protocol/protocol/Data-Storage-Layer.md)
+  * [Data Storage Layer](docs/memo-protocol/protocol/Data-Storage-Layer.md)
 
-    * [Verification Layer](docs-cn/memo-protocol/protocol/Verification-Layer.md)
+  * [Computation Layer](docs/memo-protocol/protocol/Computation-Layer.md)
 
-    * [Computation & Training Layer](docs-cn/memo-protocol/protocol/Computation-Training-Layer.md)
+  * [Verification Layer](docs/memo-protocol/protocol/Verification-Layer.md)
+
+  * [Execution Layer](docs/memo-protocol/protocol/Execution-Layer.md)
+
+  * [Identity Layer](docs/memo-protocol/protocol/Identity-Layer.md)
+
+  * [Smart Layer](docs/memo-protocol/protocol/Smart-Layer.md)
+
+* [Key Features](docs/memo-protocol/feature/README.md)
+
+  * [User-Centric](docs/memo-protocol/feature/User-Centric.md)
+
+  * [Decentralized Identity(DID)](docs/memo-protocol/feature/DID.md)
+
+  * [Data Availability(DA)](docs/memo-protocol/feature/DA.md)
+
+  * [Data Assets](docs/memo-protocol/feature/Data-Assets.md)
+
+* [Getting Started](docs/memo-protocol/getting-started/README.md)
+
+  * [Become Storage Provider](docs/memo-protocol/getting-started/Storage-Provider.md)
+
+  * [Use Data Management Services](docs/memo-protocol/getting-started/Data-Management.md)
+
+  * [Apply for DID](docs/memo-protocol/getting-started/DID.md)
+
+  * [Apply for computing Resources](docs/memo-protocol/getting-started/HashCashPoW.md)
+
+  * [Use Data Availability Services](docs/memo-protocol/getting-started/DA.md)
+
+  * [Simplify Interaction with dApps](docs/memo-protocol/getting-started/Smart.md)
+
+  * [Smart Contract Address](docs/memo-protocol/getting-started/Smart-Contract-Address.md)
+
+## TOKENOMICS
   
-    * [Identity Layer](docs-cn/memo-protocol/protocol/Identity-Layer.md)
-
-    * [Execution Layer](docs-cn/memo-protocol/protocol/Execution-Layer.md)
-
-    * [Proxy Layer](docs-cn/memo-protocol/protocol/Proxy-Layer.md)
-
-  * Key Features
-
-    * [User-Centric](docs-cn/memo-protocol/feature/User-Centric.md)
-
-    * [Decentralized Identity(DID)](docs-cn/memo-protocol/feature/DID.md)
-
-    * [Data Availability(DA)](docs-cn/memo-protocol/feature/DA.md)
-
-    * [Data Assets](docs-cn/memo-protocol/feature/Data-Assets.md)
-
-  * Getting Started
-
-    * [Become Storage Provider](docs-cn/memo-protocol/getting-started/Storage-Provider.md)
-
-    * [Use Data Management Services](docs-cn/memo-protocol/getting-started/Data-Management.md)
-
-    * [Apply for DID](docs-cn/memo-protocol/getting-started/DID.md)
-
-    * [Apply for computing Resources](docs-cn/memo-protocol/getting-started/HashRate.md)
-
-    * [Use Data Availability Services](docs-cn/memo-protocol/getting-started/DA.md)
-
-    * [Simplify Interaction with dApps](docs-cn/memo-protocol/getting-started/Proxy.md)
-
-    * [Smart Contract Address](docs-cn/memo-protocol/getting-started/Smart-Contract-Address.md)
-
-* **TOKENOMICS**
+* [MEMO & Deposit](docs/tokenomics/Memo-Deposit.md)
   
-  * [MEMO & Deposit](docs-cn/tokenomics/Memo-Deposit.md)
+* [Distribution](docs/tokenomics/Distribution.md)
+
+## ECOSYSTEM
+
+* [MEFS](docs/ecosystem/MEFS.md)
+
+* [Data Wallet](docs/ecosystem/Data-Wallet.md)
+
+* [Data Market](docs/ecosystem/Data-Market.md)
+
+* [Computing Power Platform](docs/ecosystem/Computing-Power-Platform.md)
   
-  * [Distribution](docs-cn/tokenomics/Distribution.md)
+* [Meeda](docs/ecosystem/Meeda.md)
 
-* **ECOSYSTEM**
+* [ERC7921](docs/ecosystem/ERC7921.md)
 
-  * [MEFS](docs-cn/ecosystem/MEFS.md)
+## FAQ
 
-  * [Data Wallet](docs-cn/ecosystem/Data-Wallet.md)
+* [FAQ](docs/faq/FAQ.md)
 
-  * [Data Trading Market](docs-cn/ecosystem/Data-Trading-Market.md)
+## COMMUNITY
 
-  * [Computing Power Platform](docs-cn/ecosystem/Computing-Power-Platform.md)
-  
-  * [Meeda & Mooda](docs-cn/ecosystem/Meeda&Mooda.md)
-
-  * [BRC985](docs-cn/ecosystem/BRC985.md)
-
-  * [ERC3130](docs-cn/ecosystem/ERC3130.md)
-
-* **FAQ**
-
-  * [FAQ](docs-cn/faq/FAQ.md)
-
-* **COMMUNITY**
-
-  * [Community](docs-cn/community/resource.md)
+* [Community](docs/community/resource.md)

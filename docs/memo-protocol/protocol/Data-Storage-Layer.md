@@ -1,14 +1,22 @@
-# The Planning and Design of MEMO File System
+# Data Storage Layer
 
-## MEMO's original design intention
+## Composition of the Data Storage Layer
 
-### BACKGROUND
+The data storage layer is used to provide data access interfaces for upper-layer protocols, with existing storage products including MEFS, IPFS, GreenField, Arweave, etc. In the product ecosystem of Memolabs, MEFS, which is independently designed and developed, is used as the underlying storage.
+
+### About MEFS
+
+MEFS is a decentralized storage file system independently designed and developed by Memolabs. It addresses the issues of data security, reliability, and privacy in traditional storage systems through various cutting-edge technologies, avoiding the pitfalls of centralized storage systems, and is applied as the storage infrastructure of the MEMO protocol stack.
+
+Below is a focused introduction to the design concepts and principles of the MEFS storage system.
+
+### MEFS Design Background
 
 In the era of the information explosion that we are now in, tens of thousands of documents, photos, videos and other data files are generated every day in the world. However, traditional centralized storage methods have become increasingly unable to meet market demand. It is expensive, and the second reason is that the security is not high enough, so blockchain distributed storage came into being. Compared with traditional centralized storage, blockchain distributed storage is the use of idle electronic devices scattered around the world, such as idle mobile phones, computers, hard disks, etc., which can all be used as edge storage nodes. The typical characteristics of blockchain decentralized storage are decentralization , higher security, and low cost, which has attracted the attention of global capital and technology circles.
 
 At present, the blockchain decentralized storage technology is still in the stage of continuous exploration. After continuous efforts, MEMOlab has developed a new generation of blockchain-based decentralized cloud storage system MEMO. Compared with the traditional blockchain, MEMO adopts a more concise and efficient technical processing method to protect the keeper, provider, and user information and data, thereby ensuring the cost-effectiveness of the entire storage system and enabling users to obtain better use Experience.
 
-### ADVANTAGES
+### Advangages of MEFS
 
 **Decentralized storage.** After the user uploads the source file, the Memo system can distribute the data to multiple storage nodes and provide a unified standardized interface to the outside world. When the target user initiates a download request, the nearest node downloads the fragments by the nearest node and provides them to the user completely. Multiple images or copies are provided throughout the network, which greatly improves the access speed and stability.
 
@@ -106,8 +114,6 @@ Since the User is the ultimate payer, the system does not set special restrictio
 
 #### Keeper
 
-##### How Keeper Works
-
 Keeper is an important intermediate role in the system. It assumes information intermediary and management functions, and extracts management commissions from the storage fees paid by the User.
 
 As an information intermediary, its basic function is to match information, that is, to match information between the demand-side and demand-supply side. When the User puts forward storage requirements, Keeper will find the Provider connected to itself according to the User's requirements, and match the appropriate storage node.
@@ -116,7 +122,7 @@ In addition to basic information matching, Keeper's management functions are mai
 
 In addition, another important function of Keeper is to trigger payment for storage fees. The payment is not triggered by the payer User or the payer Provider, but the payment is triggered by the middleman Keeper. This is mainly for the consideration of increasing the fairness of the system. Triggering by the middleman Keeper can reduce the probability of fraudulent behavior.
 
-##### Punishment mechanism for Keepers
++ Punishment mechanism for Keepers
 
 Keeper, as an intermediary, participates in the management of the system.Although it can solve the trust problem of the storage supply and demand of the distributed storage system to a certain extent, it is considered that Keeper itself may lack integrity, such as not challenging the storage of data on time and not on time. To trigger payment, MEMO therefore designed punishment measures for the role. The existence of the punishment mechanism can ensure the good operation of the system and the healthy development of the community to a certain extent.
 
@@ -128,13 +134,11 @@ When Keeper is disabled, if the balance pledged by the Keeper is not 0, then the
 
 #### Provider
 
-##### How Provider Works
-
 Provider is the party that provides storage space in the system. It provides storage services for the Users and obtains fees paid by the Users. After the Provider goes online, you need to explain your storage situation, which should include the available storage space, storage duration, and required storage unit price. After the Provider explains its own situation, Keeper can match according to the situation of both the User and the Provider, and then send the matched Provider information to the User, so that the User, Keepers, and Providers form a storage service.
 
 Like Keeper, Provider also has the function of triggering payment, except that Keeper triggers the payment of storage fees, while Provider triggers the payment of download fees. This is because the verification of storage fees requires the participation of the intermediate manager Keeper, while the download fee is Verification does not require the participation of intermediate managers.
 
-##### Punishment mechanism for Providers
++ Punishment mechanism for Providers
 
 The penalties for breach of the Keeper mentioned above. For Provider, the system also designs rewards and punishments, because the Provider may have problems such as corrupted data but not recovering, long-term failure to respond to User download data requests or Keeper challenges.This will not only destroy the User's data, but also seriously affect the user experience.
 

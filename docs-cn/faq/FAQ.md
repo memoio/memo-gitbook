@@ -12,7 +12,7 @@ mefs是[Memolabs](https://memolabs.org/)开发的一个低成本、可靠安全�
 
 In MEFS, object and file are equivalent. So whlie you see "object" or "file", you can think of them as "file".
 
-4.How to set the A address of the blockchain?
+4.How to set an address of the blockchain?
 
 Run mefs-user/keeper/provider config Eth to view the address of the blockchain to which you are connected, If you want to modify, you can run mefs-user/keeper/provider config Eth xxx, where xxx is the API address of the chain.
 
