@@ -10,7 +10,7 @@ go-did是由golang语言实现的SDK，可以支持创建，查询，删除以�
 
 ```bash
 cd $HOME
-### 删除所有的本地依赖库和meeda-node
+### 删除所有的本地依赖库和go-did
 rm -rf did-solidity go-did memov2-contractsv2
 ### 获取依赖包
 git clone http://132.232.87.203:8088/did/did-solidity.git
