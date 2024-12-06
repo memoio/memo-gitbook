@@ -1,16 +1,16 @@
-# Module Layer
+# Modular Blockchain
 
-## What is Module Layer?
+## What is Modular Blockchain?
 
-With the development of the internet, user data has grown explosively, with 4.2PB of data being generated every second in 2023, most of which is personal data. However, all personal data is currently owned by centralized platforms, and the management of personal data by these platforms is not transparent, leading to a large number of data breaches and the value of personal data flowing to centralized platforms, with users essentially unable to benefit from their own data. Module Layer addresses these pain points by combining decentralized mechanisms and various privacy protection mechanisms.
+With the development of the internet, user data has grown explosively, with 4.2PB of data being generated every second in 2023, most of which is personal data. However, all personal data is currently owned by centralized platforms, and the management of personal data by these platforms is not transparent, leading to a large number of data breaches and the value of personal data flowing to centralized platforms, with users essentially unable to benefit from their own data. Modular Blockchain addresses these pain points by combining decentralized mechanisms and various privacy protection mechanisms.
 
-Module Layer is the cornerstone of maintaining decentralized identity and data sovereignty. It not only provides users with a decentralized identity for their data but also manages data identity through user identity. This approach can expand the ways data is used, maximizing the value of user data. Module Layer ensures the integrity of data sovereignty through proof of storage, which is entirely dependent on the data itself rather than potentially invalid links. This method ensures the authenticity and integrity of the data.
+Modular Blockchain is the cornerstone of maintaining decentralized identity and data sovereignty. It not only provides users with a decentralized identity for their data but also manages data identity through user identity. This approach can expand the ways data is used, maximizing the value of user data. Modular Blockchain ensures the integrity of data sovereignty through proof of storage, which is entirely dependent on the data itself rather than potentially invalid links. This method ensures the authenticity and integrity of the data.
 
-Module Layer supports almost all decentralized systems, ensuring that data is accessed and reasonably reallocated in a decentralized and private manner.
+Modular Blockchain supports almost all decentralized systems, ensuring that data is accessed and reasonably reallocated in a decentralized and private manner.
 
-## Advantages of Module Layer
+## Advantages of Modular Blockchain
 
-In the Memo protocol, Module Layer implements the binding of data sovereignty and user identity and proposes a new method for data management and tokenization. It brings significant benefits to both users and enterprises.
+In the Memo protocol, Modular Blockchain implements the binding of data sovereignty and user identity and proposes a new method for data management and tokenization. It brings significant benefits to both users and enterprises.
 
 ### For Users
 
