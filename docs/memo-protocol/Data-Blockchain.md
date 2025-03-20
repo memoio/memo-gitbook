@@ -1,29 +1,29 @@
-# Modular Blockchain
+# Data Blockchain
 
-## What is Modular Blockchain?
+## What is Data Blockchain?
 
-With the development of the internet, user data has grown explosively, with 4.2PB of data being generated every second in 2023, most of which is personal data. However, all personal data is currently owned by centralized platforms, and the management of personal data by these platforms is not transparent, leading to a large number of data breaches and the value of personal data flowing to centralized platforms, with users essentially unable to benefit from their own data. Modular Blockchain addresses these pain points by combining decentralized mechanisms and various privacy protection mechanisms.
+With the development of the internet, user data has grown explosively, with 4.2PB of data being generated every second in 2023, most of which is personal data. However, all personal data is currently owned by centralized platforms, and the management of personal data by these platforms is not transparent, leading to a large number of data breaches and the value of personal data flowing to centralized platforms, with users essentially unable to benefit from their own data. Data Blockchain addresses these pain points by combining decentralized mechanisms and various privacy protection mechanisms.
 
-Modular Blockchain is the cornerstone of maintaining decentralized identity and data sovereignty. It not only provides users with a decentralized identity for their data but also manages data identity through user identity. This approach can expand the ways data is used, maximizing the value of user data. Modular Blockchain ensures the integrity of data sovereignty through proof of storage, which is entirely dependent on the data itself rather than potentially invalid links. This method ensures the authenticity and integrity of the data.
+Data Blockchain is the cornerstone of maintaining decentralized identity and data sovereignty. It not only provides users with a decentralized identity for their data but also manages data identity through user identity. This approach can expand the ways data is used, maximizing the value of user data. Data Blockchain ensures the integrity of data sovereignty through proof of storage, which is entirely dependent on the data itself rather than potentially invalid links. This method ensures the authenticity and integrity of the data.
 
-Modular Blockchain supports almost all decentralized systems, ensuring that data is accessed and reasonably reallocated in a decentralized and private manner.
+Data Blockchain supports almost all decentralized systems, ensuring that data is accessed and reasonably reallocated in a decentralized and private manner.
 
-## Advantages of Modular Blockchain
+## Advantages of Data Blockchain
 
-In the Memo protocol, Modular Blockchain implements the binding of data sovereignty and user identity and proposes a new method for data management and tokenization. It brings significant benefits to both users and enterprises.
+In the Memo protocol, Data Blockchain implements the binding of data sovereignty and user identity and proposes a new method for data management and tokenization. It brings significant benefits to both users and enterprises.
 
 ### For Users
 
 - **Easy to Use**: Through a data wallet, users can manage their data assets like managing their NFT assets.
-- **Data Privacy**: Through various privacy protection mechanisms, the security and privacy of personal data throughout its lifecycle can be ensured.
+- **Data Privacy**: Through various privacy protection mechanisms, the security and privacy of personal data throughout its lifecycle can be ensured. No organization or individual can access the user's data without the user's permission.
 - **Integrity of Data Sovereignty**: Through additional proof mechanisms, the integrity of on-chain metadata and off-chain encrypted personal data can be ensured.
 - **Data Monetization and Value Distribution**: By tokenizing data, users can enjoy the value of their data while ensuring personal data ownership. By adding various data permissions after data tokenization, the value of data assets is amplified.
 - **Cross-Chain Identity**: Save the same identity across multiple blockchains, supporting broader participation in decentralized ecosystems.
 
 ### For Enterprises
 
-- **Access to User Privacy Data**: Enterprises can access almost all user privacy data and ensure that user data does not leak during the access process.
-- **Targeted Advertising**: Enterprises can access all user data and conduct comprehensive data analysis to target specific users with advertisements.
+- **Protect User Privacy Data**: When an enterprise accesses user authorized data, it can ensure that user data will not be leaked during the access process.
+- **Targeted Advertising**: Companies can conduct comprehensive data analysis based on user authorization data and deliver advertisements to specific users.
 - **Legal Compliance**: Ensure that all data collection, processing, and value distribution activities are fully compliant with relevant laws and regulatory frameworks, giving enterprises confidence in handling user data responsibly and legally.
 
 ## Use Cases and Applications

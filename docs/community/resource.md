@@ -1,6 +1,6 @@
 # MEMO Resources
 
-MEMO is a modular data layer that contributes to the development of Web3 as a Web3 infrastructure. Here are some of our resource links. Welcome to communicate with us.
+MEMO is a data layer that contributes to the development of Web3 as a Web3 infrastructure. Here are some of our resource links. Welcome to communicate with us.
 
 ## Contact Us
 

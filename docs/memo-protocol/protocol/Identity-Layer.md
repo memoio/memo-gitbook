@@ -4,15 +4,15 @@ The Identity Layer is a key part of the MEMO decentralized ecosystem, designed t
 
 MEMO has built an innovative Identity Layer by integrating account DID (memo did), file DID (mfile did) and device DID (mdevice did), providing a comprehensive and efficient identity management and authentication solution for the decentralized data ecosystem.
 
-In the modular data layer, entities such as users, devices, and files need to have unique identities to avoid data conflicts or false identities. Traditional systems usually rely on centralized services for identity authentication, while in the modular data layer, the Identity Layer is based on blockchain and eliminates the reliance on centralized authentication services.
+In the data layer, entities such as users, devices, and files need to have unique identities to avoid data conflicts or false identities. Traditional systems usually rely on centralized services for identity authentication, while in the data layer, the Identity Layer is based on blockchain and eliminates the reliance on centralized authentication services.
 
 The Identity Layer gives each data object (such as files, transaction records) a unique identifier (such as file DID) to support the storage, sharing and asset management of data. Data transactions require clear ownership and access rights. The Identity Layer ensures that the transaction process is transparent, the data source is credible, and asset disputes are avoided.
 
-In the modular data layer, data storage and access require fine-grained control based on identity, such as allowing specific users or devices to access specific data. Identity Layer provides a mechanism for dynamically adjusting permissions to support more complex scenario requirements. Through encryption and selective disclosure functions, users can share identity information or data as needed while protecting sensitive information.
+In the data layer, data storage and access require fine-grained control based on identity, such as allowing specific users or devices to access specific data. Identity Layer provides a mechanism for dynamically adjusting permissions to support more complex scenario requirements. Through encryption and selective disclosure functions, users can share identity information or data as needed while protecting sensitive information.
 
-The modular data layer not only processes data, but also involves collaboration between users and devices. Identity Layer provides account DID, file DID, and device DID to manage user identities, data files, and IoT devices respectively, forming an efficient and collaborative ecosystem. Identity Layer follows the W3C DID standard and seamlessly connects with other modules or external systems, expanding the scope of application of the modular data layer.
+The data layer not only processes data, but also involves collaboration between users and devices. Identity Layer provides account DID, file DID, and device DID to manage user identities, data files, and IoT devices respectively, forming an efficient and collaborative ecosystem. Identity Layer follows the W3C DID standard and seamlessly connects with other modules or external systems, expanding the scope of application of the data layer.
 
-Governance in the modular data layer usually relies on a decentralized autonomous organization (DAO). Identity Layer ensures that each participant has an independent and trusted identity and binds governance rights, such as voting or proposals. Through on-chain records and identity verification, all governance activities are traceable, enhancing the transparency of the decentralized ecosystem.
+Governance in the data layer usually relies on a decentralized autonomous organization (DAO). Identity Layer ensures that each participant has an independent and trusted identity and binds governance rights, such as voting or proposals. Through on-chain records and identity verification, all governance activities are traceable, enhancing the transparency of the decentralized ecosystem.
 
 In addition, Identity Layer also supports IoT and edge computing scenarios. The Identity Layer provides a unified identity management solution through device DID, supporting device access, data sharing and remote control. Through blockchain and device DID, secure data exchange can be achieved between devices without relying on centralized servers.
 
@@ -41,7 +41,7 @@ Account DID (Decentralized Identifier) ​​is a key module for managing user i
 
 ## File DID
 
-File DID (Decentralized Identifier) ​​is an important tool for managing file identity and access rights, designed to ensure file security, traceability and decentralized storage management. It plays the following key roles in MEMO's modular data ecosystem:
+File DID (Decentralized Identifier) ​​is an important tool for managing file identity and access rights, designed to ensure file security, traceability and decentralized storage management. It plays the following key roles in MEMO's data ecosystem:
 
 1. Unique file identification
 * File uniqueness: Each file obtains a unique identifier through the file DID, ensuring that it can be uniquely identified and distinguished throughout the network.
@@ -98,4 +98,4 @@ Device DID (Decentralized Identifier) ​​is a decentralized identifier design
 
 The integrated application of MEMO's account DID, file DID and device DID in the Identity Layer breaks the limitations of traditional identity management and provides a flexible, efficient and secure solution. This not only promotes data assetization and decentralized governance, but also releases huge potential in the Internet of Things, data economy and Web3 applications.
 
-The Identity Layer is the core component of the modular data layer. It ensures that the identity of users, data and devices in the decentralized network is authentic, the permissions are clear and the interaction is efficient. By providing unique identifiers, dynamic permission control and privacy protection mechanisms, the Identity Layer not only improves the flexibility and security of the modular data layer, but also provides key support for Web3 applications, the Internet of Things and decentralized governance. This identity management method lays the foundation for the widespread application of the modular data layer.
+The Identity Layer is the core component of the data layer. It ensures that the identity of users, data and devices in the decentralized network is authentic, the permissions are clear and the interaction is efficient. By providing unique identifiers, dynamic permission control and privacy protection mechanisms, the Identity Layer not only improves the flexibility and security of the data layer, but also provides key support for Web3 applications, the Internet of Things and decentralized governance. This identity management method lays the foundation for the widespread application of the data layer.

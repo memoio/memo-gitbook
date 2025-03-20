@@ -1,16 +1,16 @@
 # Introduction MEMO
 
-As the Internet enters the era of data explosion, data storage, privacy protection and assetization have become key challenges. Traditional data storage methods face frequent system failures, lack of privacy protection, and complex and opaque data assetization processes. In the rapid development of blockchain technology, the concept of modular data layer provides a key idea to solve these problems.
+As the Internet enters the era of data explosion, data storage, privacy protection and assetization have become key challenges. Traditional data storage methods face frequent system failures, lack of privacy protection, and complex and opaque data assetization processes. In the rapid development of blockchain technology, the concept of data layer provides a key idea to solve these problems.
 
-As a modular data layer based on blockchain, MEMO has the following characteristics:
+As a data layer based on blockchain, MEMO has the following characteristics:
 
 Solving the limitations of traditional storage
 
-Current centralized storage methods (such as traditional cloud storage) are susceptible to single point failures and privacy leaks. MEMO's modular design separates data storage, processing and access, builds a more flexible and decentralized storage architecture, and improves the security and reliability of data storage.
+Current centralized storage methods (such as traditional cloud storage) are susceptible to single point failures and privacy leaks. MEMO's design separates data storage, processing and access, builds a more flexible and decentralized storage architecture, and improves the security and reliability of data storage.
 
 Improving the scalability of blockchain
 
-Blockchain systems often encounter performance bottlenecks when facing massive amounts of data. MEMO separates storage functions from execution and consensus layers through a modular data layer architecture. This design reduces the burden on blockchain nodes and improves the system's throughput, enabling it to better support high-frequency trading scenarios and complex applications.
+Blockchain systems often encounter performance bottlenecks when facing massive amounts of data. MEMO separates storage functions from execution and consensus layers through a data layer architecture. This design reduces the burden on blockchain nodes and improves the system's throughput, enabling it to better support high-frequency trading scenarios and complex applications.
 
 Promoting data assetization and transparency
 
@@ -18,7 +18,7 @@ Data assetization is an important trend in the future digital economy, but the p
 
 Building infrastructure for Web3
 
-The modular data layer is an important part of building Web3 infrastructure. MEMO's modular architecture enables seamless integration with other blockchains or applications, supports cross-chain interoperability, and provides developers with flexible tools to build decentralized applications.
+The data layer is an important part of building Web3 infrastructure. MEMO's architecture enables seamless integration with other blockchains or applications, supports cross-chain interoperability, and provides developers with flexible tools to build decentralized applications.
 
 In order to realize the above vision, MEMO has built an ecosystem consisting of MEMO Protocol, launched the MEFS decentralized storage system, provided two data availability solutions, Meeda and Mooda, developed two chain-based online disks, EthDrive and LensDrive, and launched data wallets, data trading markets, and decentralized computing power leasing platforms.
 
@@ -26,7 +26,7 @@ In order to realize the above vision, MEMO has built an ecosystem consisting of 
 
 MEMO Protocol
 
-MEMO Protocol is a modular data layer that can promote data storage, data management and data assetization of blockchain + AI. It covers decentralized data storage, on-chain data storage verification, decentralized identity, 100% user management of data, and easy data assetization. Through the MEMO protocol, users can control their own data as never before, and the flexibility and scalability of blockchain systems can be improved.
+MEMO Protocol is a data layer that can promote data storage, data management and data assetization of blockchain + AI. It covers decentralized data storage, on-chain data storage verification, decentralized identity, 100% user management of data, and easy data assetization. Through the MEMO protocol, users can control their own data as never before, and the flexibility and scalability of blockchain systems can be improved.
 
 MEFS
 

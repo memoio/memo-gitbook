@@ -8,7 +8,7 @@
 
 ## MEMO PROTOCOL
   
-* [Modular Blockchain](docs/memo-protocol/Modular-Blockchain.md)
+* [Data Blockchain](docs/memo-protocol/Data-Blockchain.md)
 
 * [MEMO Protocol](docs/memo-protocol/protocol/README.md)
   
