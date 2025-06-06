@@ -68,7 +68,9 @@
   
 * [Meeda](docs/ecosystem/Meeda.md)
 
-* [ERC7921](docs/ecosystem/ERC7921.md)
+* [What is ERC-7829](docs/ecosystem/What-is-ERC-7829.md)
+
+* [ERC-7829](docs/ecosystem/ERC7829.md)
 
 ## FAQ
 
