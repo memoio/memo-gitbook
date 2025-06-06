@@ -1,15 +1,15 @@
-# MEMO Docs
+# MEMO 文档
 
-Welcome to the official documentation repository for MEMO.
+欢迎来到 MEMO 官方文档库。
 
-MEMO is maintained by [MemoLabs](https://memolabs.org/). MEMO is an AI-Driven decentralized platform that is revolutionizing data storage and management. By offering secure, intelligent, and user-centric cloud solutions, MEMO empowers users to take control of their data like never before.
+MEMO 由 [MemoLabs](https://memolabs.org/) 维护。MEMO 是一个人工智能驱动的去中心化平台，正在彻底改变数据存储和管理。通过提供安全、智能和以用户为中心的云解决方案，MEMO 使用户能够以前所未有的方式控制他们的数据。
 
-These documents are about MEMO system architecture and ecological modules.
+这些文档是关于 MEMO 系统架构和生态模块的。
 
-## Contribution Guidelines
+## 贡献指南
 
 [MEMO docs github](https://github.com/memoio/memo-gitbook)
 
-We welcome community contributions!
+我们欢迎社区贡献！
 
-Please ensure to create a new branch for your changes and gives a correct and sufficient commit message before commit.
+请确保为您的更改创建一个新分支，并在提交前提供正确且充分的提交消息。
