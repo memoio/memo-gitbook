@@ -2,6 +2,8 @@
 
 ## Meeda
 
+了解更多详细内容，请查阅[Meeda Docs](https://memolabs.gitbook.io/meeda)
+
 ### Meeda-node
 
 #### 通过源码安装meeda-node
@@ -15,12 +17,12 @@
    ### 删除所有的本地依赖库和meeda-node
    rm -rf meeda-node did-solidity go-did memov2-contractsv2 go-mefs-v2 relay memo-go-contracts-v2
    ### 获取依赖包
-   git clone http://132.232.87.203:8088/did/did-solidity.git
-   git clone http://132.232.87.203:8088/did/go-did.git
-   git clone http://132.232.87.203:8088/508dev/memov2-contractsv2.git
-   git clone http://132.232.87.203:8088/508dev/go-mefs-v2.git
-   git clone http://132.232.87.203:8088/508dev/relay.git
-   git clone http://132.232.87.203:8088/508dev/memo-go-contracts-v2.git
+   git clone https://github.com/memoio/did-solidity.git
+   git clone https://github.com/memoio/go-did-sdk.git 
+   git clone https://github.com/memoio/memov2-contractsv2.git 
+   git clone https://github.com/memoio/go-mefs-v2.git 
+   git clone https://github.com/memoio/mefs-relay.git
+   git clone https://github.com/memoio/memo-go-contracts-v2.git 
    ### 将依赖包切换到最新分支(go-mefs-v2)
    cd go-mefs-v2
    git checkout 2.7.4
@@ -34,7 +36,7 @@
    git checkout meeda-v2.0.2
    cd ..
    ### 获取meeda-node
-   git clone http://132.232.87.203:8088/middleware/meeda-node.git
+   git clone https://github.com/memoio/meeda-node.git
    ### 
    cd meeda-node
    ### 切换到最新分支

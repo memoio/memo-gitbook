@@ -47,3 +47,7 @@ Meeda的架构中包含四个主要组成部分：
 3. 验证合约：主要负责链上验证。根据VRF-Sampling（Verifiable Random Function）周期生成seed信息，用于后续的证明生成和证明验证；对持续提交的聚合证明进行验证；并且保存用于获取数据的索引信息commitment。
   
 4. Light Node：对链上验证发起挑战。
+
+### 使用Meeda
+
+请查阅[Meeda Docs](https://memolabs.gitbook.io/meeda)

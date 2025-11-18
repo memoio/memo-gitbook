@@ -2,6 +2,8 @@
 
 ## Meeda
 
+To see more, please click: [Meeda Docs](https://memolabs.gitbook.io/meeda)
+
 ### Installing Meeda-node from Source
 
 The installation of Meeda-node includes the following steps:
@@ -13,12 +15,12 @@ cd $HOME
 ### Remove all local dependency libraries and Meeda-node
 rm -rf meeda-node did-solidity go-did memov2-contractsv2 go-mefs-v2 relay memo-go-contracts-v2
 ### Get dependency packages
-git clone http://132.232.87.203:8088/did/did-solidity.git 
-git clone http://132.232.87.203:8088/did/go-did.git 
-git clone http://132.232.87.203:8088/508dev/memov2-contractsv2.git 
-git clone http://132.232.87.203:8088/508dev/go-mefs-v2.git 
-git clone http://132.232.87.203:8088/508dev/relay.git 
-git clone http://132.232.87.203:8088/508dev/memo-go-contracts-v2.git 
+git clone https://github.com/memoio/did-solidity.git
+git clone https://github.com/memoio/go-did-sdk.git 
+git clone https://github.com/memoio/memov2-contractsv2.git 
+git clone https://github.com/memoio/go-mefs-v2.git 
+git clone https://github.com/memoio/mefs-relay.git
+git clone https://github.com/memoio/memo-go-contracts-v2.git 
 ### Switch to the latest branch (go-mefs-v2)
 cd go-mefs-v2
 git checkout 2.7.4
@@ -32,7 +34,7 @@ cd go-did
 git checkout meeda-v2.0.2
 cd ..
 ### Get Meeda-node
-git clone http://132.232.87.203:8088/middleware/meeda-node.git 
+git clone https://github.com/memoio/meeda-node.git 
 ### 
 cd meeda-node
 ### Switch to the latest branch
