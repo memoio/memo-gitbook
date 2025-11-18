@@ -47,3 +47,7 @@ Meeda's architecture contains four main components:
 3. Verification contract: Mainly responsible for on-chain verification. Generate seed information according to the VRF-Sampling (Verifiable Random Function) cycle for subsequent proof generation and proof verification; verify the continuously submitted aggregated proof; and save the index information commitment used to obtain data.
 
 4. Light Node: Challenges on-chain verification.
+
+### See More
+
+[Meeda Docs](https://memolabs.gitbook.io/meeda)
