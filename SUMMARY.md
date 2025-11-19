@@ -72,6 +72,13 @@
 
 * [ERC7921](docs-cn/ecosystem/ERC7921.md)
 
+## MEMO AIAGENT
+
+* [x402](docs/memo-aiagent/x402/x402%20Introduction.md)
+  * [How x402 Works](docs/memo-aiagent/x402/How%20x402%20Works.md)
+  * [HTTP 402](docs/memo-aiagent/x402/HTTP%20402.md)
+  * [MEMO Facilitator](docs/memo-aiagent/x402/Facilitator.md)
+
 ## FAQ
 
 * [FAQ](docs-cn/faq/FAQ.md)
