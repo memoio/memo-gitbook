@@ -13,6 +13,8 @@ MEMO 致力于构建一个可信、开放且可扩展的 Web3 原生基础设施
 
 * DID / Attestation / DA：Agent 的可信身份与可信执行基础设施
 
+* MEMO Storage: 为Agent提供隐私保护的数据存储中间件
+
 这份 Introduction 文档是整个 AI Agent 文档体系的入口，将帮助你逐步理解 MEMO 如何构建一个 **可验证、可支付、可协作** 的 Agent 生态。
 
 ## Why AI Agent Needs MEMO?
@@ -38,7 +40,7 @@ MEMO 的基础服务正好对应这些缺口：
 | 执行可信度 | TEE + DA |
 | 支付 | x402 + Pay Facilitator |
 | 调用链上服务 | EIP-8004 |
-| 数据源 | DA / Storage |
+| 数据源 | DA / MEMO Storage |
 
 这样，AI Agent 不再只是“一个能聊天能执行任务的程序”，
 而是真正变成 **链上身份 + 链上支付能力 + 可验证执行 + 钱包原生能力 + 服务调用** 的自主体。
@@ -51,7 +53,7 @@ MEMO 的基础服务正好对应这些缺口：
 
 ### Infrastructure 层
 
-TEE、Storage、LLM —— 为 Agent 的执行与数据提供底层算力与环境。
+TEE、MEMO Storage、LLM —— 为 Agent 的执行与数据提供底层算力与环境。
 
 ### Core Services 层
 
@@ -65,9 +67,11 @@ TEE、Storage、LLM —— 为 Agent 的执行与数据提供底层算力与环�
 
 * **Pay Facilitator（x402 & extensions）**：提供链上支付能力，如 gas 支付、跨链支付
 
+* **MEMO Storage（Privacy-Preserving Storage）**：面向 Agent 的隐私保护数据存储中间件，支持端到端加密、基于 Attestation 的访问控制、与 TEE 的远程证明集成，以及数据写入承诺与 DA 绑定。
+
 ### Access 层
 
-通过 **EIP-8004 标准协议**（有 Python / JavaScript SDK），为 Agent、应用、MCP Tools 提供统一的服务调用接口。
+通过 **EIP-8004 标准协议**（有 Python / JavaScript SDK），为 Agent、应用、MCP Tools 提供统一的服务调用接口（包含 MEMO Storage、DID、Attestation、DA、x402 支付等模块）。
 
 ### Application 层
 
@@ -86,7 +90,7 @@ TEE、Storage、LLM —— 为 Agent 的执行与数据提供底层算力与环�
 
 * Agent 的每次链上交互（认证、证明、DA、支付）都通过该层进行
 
-* DID、Attestation、DA、x402 支付模块分别通过区块链提供可验证的能力
+* DID、Attestation、DA、x402 支付、MEMO Storage 等模块分别通过区块链/存储提供可验证能力与数据路径
 
 * Agent 则通过调用该 Layer 实现实际的链上操作，如：
 
@@ -130,6 +134,23 @@ x402（以及 extensions）是 AI Agent 在区块链上支付的基础。它解�
 
 * 与 Pay Facilitator 的关系
 
+## MEMO Storage: Privacy-Preserving Data Middleware
+
+MEMO Storage 为 Agent 提供面向隐私与合规的存储能力，特点包括：
+
+* **端到端加密**：数据在 Agent 侧加密后入库，服务端仅处理密文；密钥可结合 DID/Attestation 与策略分发。
+* **访问控制与审计**：基于 Attestation/Capability 的权限授予与收回，支持细粒度访问与操作审计。
+* **与 TEE 集成**：支持远程证明的机密计算场景，密钥/数据在 TEE 中安全处理与封装。
+* **可用性与可验证性**：数据承诺与 DA 进行绑定，支持检索与完整性校验。
+* **经济结算**：通过 x402 实现按量/按次计费的读写与带宽结算，支持微支付。
+* **统一接口**：通过 EIP-8004 提供上传、检索、授权、撤销等 API，配套 Python/JS SDK。
+
+典型应用场景：
+
+- 私有知识库与向量检索的密文语料管理
+- 多 Agent 协作工作流中的中间产物与日志留存
+- “支付后可取”的受保护数据分发（pay-to-access）
+
 ## EIP-8004: The Access Layer for Agents
 
 EIP-8004 是 AI Agent 与链上基础设施间的统一接口规范，用于标准化：
@@ -142,7 +163,7 @@ EIP-8004 是 AI Agent 与链上基础设施间的统一接口规范，用于标�
 
 * Agent 如何执行支付（配合 x402）
 
-* Agent 如何访问 Storage 或 TEE
+* Agent 如何访问 MEMO Storage 或 TEE
 
 EIP-8004 为整个 MEMO AIAGENT 构建标准化 SDK 和 Framework，使开发者可以通过统一 API 创建：
 
