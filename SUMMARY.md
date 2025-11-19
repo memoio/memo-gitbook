@@ -74,10 +74,12 @@
 
 ## MEMO AIAGENT
 
-* [x402](docs/memo-aiagent/x402/x402%20Introduction.md)
-  * [How x402 Works](docs/memo-aiagent/x402/How%20x402%20Works.md)
-  * [HTTP 402](docs/memo-aiagent/x402/HTTP%20402.md)
-  * [MEMO Facilitator](docs/memo-aiagent/x402/Facilitator.md)
+* [introduction](docs-cn/memo-aiagent/introduction.md)
+
+* [x402](docs-cn/memo-aiagent/x402/x402%20Introduction.md)
+  * [How x402 Works](docs-cn/memo-aiagent/x402/How%20x402%20Works.md)
+  * [HTTP 402](docs-cn/memo-aiagent/x402/HTTP%20402.md)
+  * [MEMO Facilitator](docs-cn/memo-aiagent/x402/Facilitator.md)
 
 ## FAQ
 
