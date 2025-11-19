@@ -10,6 +10,7 @@ Within this context, the MEMO AIAGENT documentation set introduces a complete se
 * x402: On-chain payment capability specification for AI Agents
 * EIP-8004: Standardized invocation protocol between Agents and on-chain services
 * DID / Attestation / DA: Trustworthy identity & execution infrastructure for Agents
+* MEMO Storage: Privacy-preserving data storage middleware for Agents
 
 This Introduction document is the entry point to the entire AI Agent documentation system, helping you progressively understand how MEMO builds a **verifiable, payable and collaborative** Agent ecosystem.
 
@@ -32,7 +33,7 @@ MEMO’s base services map exactly to these gaps:
 | Execution Trustworthiness | TEE + DA |
 | Payment | x402 + Pay Facilitator |
 | Calling On-chain Services | EIP-8004 |
-| Data Source | DA / Storage |
+| Data Source | DA / MEMO Storage |
 
 Thus an AI Agent is no longer “just a chatty task runner”, but becomes an autonomous entity with **on-chain identity + on-chain payment ability + verifiable execution + wallet-native capability + service invocation**.
 
@@ -44,7 +45,7 @@ From bottom to top the layered architecture is:
 
 ### Infrastructure Layer
 
-TEE, Storage, LLM — provide foundational compute and environment for Agent execution & data.
+TEE, MEMO Storage, LLM — provide foundational compute and environment for Agent execution & data.
 
 ### Core Services Layer
 
@@ -54,10 +55,11 @@ Composed of MEMO core modules:
 * **Attestation:** Supplies proofs for permissions, claims and actions
 * **DA (Data Availability):** Ensures data availability between the Agent and on-chain tasks
 * **Pay Facilitator (x402 & extensions):** Offers on-chain payment capabilities (gas payment, cross-chain settlement)
+* **MEMO Storage (Privacy-Preserving Storage):** Privacy-preserving storage middleware for Agents supporting end-to-end encryption, attestation-based access control, TEE remote attestation integration, and data commitments bound with DA.
 
 ### Access Layer
 
-Through the **EIP-8004 standard protocol** (with Python / JavaScript SDKs) it exposes unified service invocation interfaces for Agents, applications and MCP tools.
+Through the **EIP-8004 standard protocol** (with Python / JavaScript SDKs) it exposes unified service invocation interfaces for Agents, applications and MCP tools, including MEMO Storage, DID, Attestation, DA and x402 modules.
 
 ### Application Layer
 
@@ -73,7 +75,7 @@ This diagram further illustrates the core role of the **Trustless Agents Protoco
 
 * Serves as the intermediary protocol layer between AI Agents and blockchain services  
 * Every on-chain interaction (authentication, attestation, DA, payment) passes through this layer  
-* DID, Attestation, DA and x402 payment modules each provide verifiable capabilities via the blockchain  
+* DID, Attestation, DA, x402 payments and MEMO Storage provide verifiable capabilities via blockchain/storage  
 * The Agent invokes this layer to perform real on-chain operations such as:  
     * Creating & using DID  
     * Obtaining / submitting Attestations  
@@ -102,6 +104,23 @@ In the /x402 directory you will find:
 * Agent payment examples  
 * Relationship with Pay Facilitator  
 
+## MEMO Storage: Privacy-Preserving Data Middleware
+
+MEMO Storage provides privacy- and compliance-oriented storage capabilities for Agents. Key features include:
+
+* **End-to-end encryption:** Data is encrypted client-side by the Agent; servers handle ciphertext only. Keys can be distributed via DID/Attestation-driven policies.
+* **Access control & audit:** Capability/attestation-based grants and revocations, fine-grained access control and operation auditing.
+* **TEE integration:** Supports remote-attested confidential computing; keys/data are processed securely inside a TEE.
+* **Availability & verifiability:** Data commitments are bound to DA, enabling retrieval integrity checks and verifiable availability.
+* **Economic settlement:** Usage-based read/write and bandwidth settlement via x402 micropayments.
+* **Unified API:** Upload, retrieve, authorize and revoke via EIP-8004; Python/JS SDKs available.
+
+Typical use cases:
+
+* Encrypted corpora management for private knowledge bases and vector search
+* Intermediate artifacts and logs in multi-Agent collaborative workflows
+* Protected “pay-to-access” data distribution
+
 ## EIP-8004: The Access Layer for Agents
 
 EIP-8004 is the unified interface specification between AI Agents and the underlying on-chain infrastructure, standardizing:
@@ -110,7 +129,7 @@ EIP-8004 is the unified interface specification between AI Agents and the underl
 * How an Agent submits / verifies Attestations  
 * How an Agent accesses DA  
 * How an Agent performs payments (together with x402)  
-* How an Agent accesses Storage or a TEE  
+* How an Agent accesses MEMO Storage or a TEE  
 
 EIP-8004 builds a standardized SDK & framework for the entire MEMO AIAGENT stack, letting developers use one API surface to create:
 
