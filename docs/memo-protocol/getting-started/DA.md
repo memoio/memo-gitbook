@@ -2,8 +2,6 @@
 
 ## Meeda
 
-To see more, please click: [Meeda Docs](https://memolabs.gitbook.io/meeda)
-
 ### Installing Meeda-node from Source
 
 The installation of Meeda-node includes the following steps:

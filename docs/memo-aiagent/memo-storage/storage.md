@@ -13,9 +13,9 @@ The middleware service runs by default on port **8080**.
 
 The middleware uses **[DID](https://www.w3.org/TR/did-core/) (Decentralized Identifier)** for login, enabling verifiable and decentralized digital identity. Specifically, we use **[Memo DID](https://github.com/memoio/did-docs/blob/master/memo-did-design.md)** as the account system. Users must first create a **Memo DID** and add verification methods before logging in. For details, refer to:
 
-* [go-did-sdk](https://github.com/memoio/go-did)
+* [go-did-sdk](https://github.com/memoio/go-did-sdk)
 
-* [js-did-sdk](https://github.com/memoio/js-did)
+* [js-did-sdk](https://github.com/memoio/js-did-sdk)
 
 ### 1.1 Login
 
