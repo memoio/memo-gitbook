@@ -50,6 +50,24 @@
 
   * [Smart Contract Address](docs/memo-protocol/getting-started/Smart-Contract-Address.md)
 
+* [Meeda](docs/memo-protocol/meeda/developers/Detailed-description-of-Meeda.md)
+
+  * [Developers](docs/memo-protocol/meeda/developers/LightNode-API.md)
+
+    * [Connect L2 to Meeda](docs/memo-protocol/meeda/developers/How-to-connect-L2-to-Meeda.md)
+
+    * [Deploy OPStack Layer2 with Meeda](docs/memo-protocol/meeda/developers/Deploy-OPStackLayer2-with-Meeda.md)
+
+    * [Contract](docs/memo-protocol/meeda/developers/Contract.md)
+
+    * [FileProof API](docs/memo-protocol/meeda/developers/FileProof-API.md)
+
+    * [FileProof Contract Address](docs/memo-protocol/meeda/developers/FileProof-contract-address.md)
+
+  * [Node](docs/memo-protocol/meeda/node/How-to-build-LightNode.md)
+
+    * [Layer2+Meeda](docs/memo-protocol/meeda/node/Layer2+Meeda.md)
+
 ## TOKENOMICS
   
 * [MEMO & Deposit](docs/tokenomics/Memo-Deposit.md)
@@ -66,7 +84,13 @@
 
 * [Computing Power Platform](docs/ecosystem/Computing-Power-Platform.md)
   
-* [Meeda](docs/ecosystem/Meeda.md)
+* [Meeda](docs/ecosystem/meeda/What's-Meeda.md)
+
+  * [Description](docs/ecosystem/meeda/Description.md)
+
+  * [Node Type](docs/ecosystem/meeda/Node-Type.md)
+
+  * [Resource](docs/ecosystem/meeda/resouce.md)
 
 * [What is ERC-7829](docs/ecosystem/What-is-ERC-7829.md)
 
