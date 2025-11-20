@@ -2,8 +2,6 @@
 
 ## Meeda
 
-了解更多详细内容，请查阅[Meeda Docs](https://memolabs.gitbook.io/meeda)
-
 ### Meeda-node
 
 #### 通过源码安装meeda-node

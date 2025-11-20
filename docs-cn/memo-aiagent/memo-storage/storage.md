@@ -11,7 +11,7 @@ MEMO 通用中间件为开发者、企业、个人用户等提供一个可扩展
 
 ## 登录验证
 
-中间件使用[DID](https://www.w3.org/TR/did-core/)作为账号进行登录，DID是一种新型标识符，可实现可验证、去中心化的数字身份。更具体的，我们使用[Memo DID](http://132.232.87.203:8088/did/docs/blob/master/memo-did%E8%AE%BE%E8%AE%A1.md)作为通用中间件的账号。因此用户在登录之前需要首先创建Memo DID并添加验证方法，关于Memo DID的操作详情请参考[go-did-sdk](http://132.232.87.203:8088/did/go-did)以及[js-did-sdk](http://132.232.87.203:8088/did/js-did)。
+中间件使用[DID](https://www.w3.org/TR/did-core/)作为账号进行登录，DID是一种新型标识符，可实现可验证、去中心化的数字身份。更具体的，我们使用[Memo DID](https://github.com/memoio/did-docs/blob/master/memo-did-design.md)作为通用中间件的账号。因此用户在登录之前需要首先创建Memo DID并添加验证方法，关于Memo DID的操作详情请参考[go-did-sdk](https://github.com/memoio/go-did-sdk)以及[js-did-sdk](https://github.com/memoio/js-did-sdk)。
 
 ### 1.1 登录
 

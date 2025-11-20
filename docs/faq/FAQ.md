@@ -38,4 +38,4 @@ DA not only includes data storage, but also needs to ensure that any node can ac
 
 10.How to combine Ethereum Layer2 with Meeda?
 
-For details, please refer to the contents of `Node/Op Node & Meeda` and `Developers/Connect L2 to Meeda`.
+For details, please refer to the contents of `memo-protocol/meeda/develops/connect L2 to Meeda` and `memo-protocol/meeda/node/Layer2+Meeda`.

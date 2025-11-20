@@ -38,4 +38,4 @@ DA不仅仅包含数据的存储，还需要保证任意节点都能够访问数
 
 10.How to combine Ethereum Layer2 with Meeda?
 
-具体请参考`Node/Op Node & Meeda`和`Developers/Connect L2 to Meeda`部分的内容。
+具体请参考`memo-protocol/meeda/develops/connect L2 to Meeda`和`memo-protocol/meeda/node/Layer2+Meeda`部分的内容。
