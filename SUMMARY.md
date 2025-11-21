@@ -80,7 +80,7 @@
 
 ## MEMO AIAGENT
 
-* [introduction](docs/memo-aiagent/introduction.md)
+* [Introduction](docs/memo-aiagent/introduction.md)
 
 * [x402](docs/memo-aiagent/x402/x402%20Introduction.md)
   * [How x402 Works](docs/memo-aiagent/x402/How%20x402%20Works.md)
@@ -107,7 +107,7 @@
 
     * [Layer2+Meeda](docs/memo-aiagent/da/node/Layer2+Meeda.md)
 
-* [storage](docs/memo-aiagent/memo-storage/storage.md)
+* [Storage](docs/memo-aiagent/memo-storage/storage.md)
 
 ## FAQ
 
