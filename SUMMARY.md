@@ -50,24 +50,6 @@
 
   * [Smart Contract Address](docs/memo-protocol/getting-started/Smart-Contract-Address.md)
 
-* [Meeda](docs/memo-protocol/meeda/developers/Detailed-description-of-Meeda.md)
-
-  * [Developers](docs/memo-protocol/meeda/developers/LightNode-API.md)
-
-    * [Connect L2 to Meeda](docs/memo-protocol/meeda/developers/How-to-connect-L2-to-Meeda.md)
-
-    * [Deploy OPStack Layer2 with Meeda](docs/memo-protocol/meeda/developers/Deploy-OPStackLayer2-with-Meeda.md)
-
-    * [Contract](docs/memo-protocol/meeda/developers/Contract.md)
-
-    * [FileProof API](docs/memo-protocol/meeda/developers/FileProof-API.md)
-
-    * [FileProof Contract Address](docs/memo-protocol/meeda/developers/FileProof-contract-address.md)
-
-  * [Node](docs/memo-protocol/meeda/node/How-to-build-LightNode.md)
-
-    * [Layer2+Meeda](docs/memo-protocol/meeda/node/Layer2+Meeda.md)
-
 ## TOKENOMICS
   
 * [MEMO & Deposit](docs/tokenomics/Memo-Deposit.md)
@@ -104,6 +86,26 @@
   * [How x402 Works](docs/memo-aiagent/x402/How%20x402%20Works.md)
   * [HTTP 402](docs/memo-aiagent/x402/HTTP%20402.md)
   * [MEMO Facilitator](docs/memo-aiagent/x402/Facilitator.md)
+
+* [DID](docs/memo-aiagent/did/memo-did.md)
+
+* [DA](docs/memo-aiagent/da/developers/Detailed-description-of-Meeda.md)
+
+  * [Developers](docs/memo-aiagent/da/developers/LightNode-API.md)
+
+    * [Connect L2 to Meeda](docs/memo-aiagent/da/developers/How-to-connect-L2-to-Meeda.md)
+
+    * [Deploy OPStack Layer2 with Meeda](docs/memo-aiagent/da/developers/Deploy-OPStackLayer2-with-Meeda.md)
+
+    * [Contract](docs/memo-aiagent/da/developers/Contract.md)
+
+    * [FileProof API](docs/memo-aiagent/da/developers/FileProof-API.md)
+
+    * [FileProof Contract Address](docs/memo-aiagent/da/developers/FileProof-contract-address.md)
+
+  * [Node](docs/memo-aiagent/da/node/How-to-build-LightNode.md)
+
+    * [Layer2+Meeda](docs/memo-aiagent/da/node/Layer2+Meeda.md)
 
 * [storage](docs/memo-aiagent/memo-storage/storage.md)
 
