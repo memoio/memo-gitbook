@@ -105,9 +105,9 @@
   * [HTTP 402](docs-cn/memo-aiagent/x402/HTTP%20402.md)
   * [MEMO Facilitator](docs-cn/memo-aiagent/x402/Facilitator.md)
 
-* [eip-8004](docs-cn/memo-aiagent/eip-8004/introduction.md)
+## * [eip-8004](docs-cn/memo-aiagent/eip-8004/introduction.md)
 
-* [storage](docs-cn/memo-aiagent/memo-storage/api.md)
+* [storage](docs-cn/memo-aiagent/memo-storage/storage.md)
 
 ## FAQ
 
