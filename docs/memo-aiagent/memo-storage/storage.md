@@ -3,9 +3,9 @@ html:
  toc: true
 ---
 
-# MEMO Universal Middleware HTTP API Documentation
+# MEMO Storage Middleware HTTP API Documentation
 
-The **MEMO Universal Middleware** provides developers, enterprises, and individual users with an **extensible, private, reliable, and composable storage platform**. Users can flexibly choose their preferred underlying storage system—currently supporting **decentralized storage (IPFS)** and **distributed storage (MEFS)**. Additionally, MEMO offers a **file marketplace** where users can freely trade access permissions to their files and retrieve files via keyword-based searches.
+The **MEMO Storage Middleware** provides developers, enterprises, and individual users with an **extensible, private, reliable, and composable storage platform**. Users can flexibly choose their preferred underlying storage system—currently supporting **decentralized storage (IPFS)** and **distributed storage (MEFS)**. Additionally, MEMO offers a **file marketplace** where users can freely trade access permissions to their files and retrieve files via keyword-based searches.
 
 The middleware service runs by default on port **8080**.
 
@@ -13,9 +13,9 @@ The middleware service runs by default on port **8080**.
 
 The middleware uses **[DID](https://www.w3.org/TR/did-core/) (Decentralized Identifier)** for login, enabling verifiable and decentralized digital identity. Specifically, we use **[Memo DID](https://github.com/memoio/did-docs/blob/master/memo-did-design.md)** as the account system. Users must first create a **Memo DID** and add verification methods before logging in. For details, refer to:
 
-* [go-did-sdk](https://github.com/memoio/go-did-sdk)
+* [did-go-sdk](https://github.com/memoio/did-go-sdk)
 
-* [js-did-sdk](https://github.com/memoio/js-did-sdk)
+* [did-js-sdk](https://github.com/memoio/did-js-sdk)
 
 ### 1.1 Login
 
@@ -427,24 +427,24 @@ The middleware is based on [Mfile DID](https://github.com/memoio/did-docs/blob/m
 
 ### Upload to fileDNS
 
-No HTTP API is provided. Uploading to fileDNS can be done via the [js-did-sdk](https://github.com/memoio/js-did) or [go-did-sdk](https://github.com/memoio/go-did).
+No HTTP API is provided. Uploading to fileDNS can be done via the [did-js-sdk](https://github.com/memoio/js-did) or [did-go-sdk](https://github.com/memoio/go-did).
 
 ### Grant Read Permissions
 
-No HTTP API is provided. Read permissions can be granted via the [js-did-sdk](https://github.com/memoio/js-did) or [go-did-sdk](https://github.com/memoio/go-did).
+No HTTP API is provided. Read permissions can be granted via the [did-js-sdk](https://github.com/memoio/js-did) or [did-go-sdk](https://github.com/memoio/go-did).
 
 ### Purchase Read Permissions
 
-No HTTP API is provided. Read permissions can be purchased via the [js-did-sdk](https://github.com/memoio/js-did) or [go-did-sdk](https://github.com/memoio/go-did).
+No HTTP API is provided. Read permissions can be purchased via the [did-js-sdk](https://github.com/memoio/js-did) or [did-go-sdk](https://github.com/memoio/go-did).
 
 ### Modify File Information in DNS
 
-No HTTP API is provided. File information in DNS can be modified using either the `js-did-sdk` or `go-did-sdk`, including:
+No HTTP API is provided. File information in DNS can be modified using either the `did-js-sdk` or `did-go-sdk`, including:
 
-- **Change File Owner**: Use [js-did-sdk](https://github.com/memoio/js-did) or [go-did-sdk](https://github.com/memoio/go-did) to change file ownership.
-- **Change File Type** (0 for private, 1 for public): Use [js-did-sdk](https://github.com/memoio/js-did) or [go-did-sdk](https://github.com/memoio/go-did) to update the file type.
-- **Change File Price** (unit: attomemo): Use [js-did-sdk](https://github.com/memoio/js-did) or [go-did-sdk](https://github.com/memoio/go-did) to modify the file price.
-- **Change File Keywords**: Use [js-did-sdk](https://github.com/memoio/js-did) or [go-did-sdk](https://github.com/memoio/go-did) to update file keywords.
+- **Change File Owner**: Use [did-js-sdk](https://github.com/memoio/js-did) or [did-go-sdk](https://github.com/memoio/go-did) to change file ownership.
+- **Change File Type** (0 for private, 1 for public): Use [did-js-sdk](https://github.com/memoio/js-did) or [did-go-sdk](https://github.com/memoio/go-did) to update the file type.
+- **Change File Price** (unit: attomemo): Use [did-js-sdk](https://github.com/memoio/js-did) or [did-go-sdk](https://github.com/memoio/go-did) to modify the file price.
+- **Change File Keywords**: Use [did-js-sdk](https://github.com/memoio/js-did) or [did-go-sdk](https://github.com/memoio/go-did) to update file keywords.
 
 
 ### Retrieve File Information from DNS

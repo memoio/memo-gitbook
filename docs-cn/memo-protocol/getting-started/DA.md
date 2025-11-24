@@ -16,7 +16,7 @@
    rm -rf meeda-node did-solidity go-did memov2-contractsv2 go-mefs-v2 relay memo-go-contracts-v2
    ### 获取依赖包
    git clone https://github.com/memoio/did-solidity.git
-   git clone https://github.com/memoio/go-did-sdk.git 
+   git clone https://github.com/memoio/did-go-sdk.git 
    git clone https://github.com/memoio/memov2-contractsv2.git 
    git clone https://github.com/memoio/go-mefs-v2.git 
    git clone https://github.com/memoio/mefs-relay.git
