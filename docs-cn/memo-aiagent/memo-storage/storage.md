@@ -3,15 +3,15 @@ html:
  toc: true
 ---
 
-# 通用中间件HTTPAPI说明文档
+# 存储中间件HTTPAPI说明文档
 
-MEMO 通用中间件为开发者、企业、个人用户等提供一个可扩展、私密性、可靠可用性并且具有可组合性的存储平台，用户可以灵活选择适合自己的底层存储系统，目前支持去中心化存储系统IPFS以及分散式存储系统MEFS。除此之外，MEMO通用中间件还给用户提供了一个文件市场，用户可以在该市场中自由交易个人文件的读取权限，还可以通过关键字等描述信息检索文件。
+MEMO 存储中间件为开发者、企业、个人用户等提供一个可扩展、私密性、可靠可用性并且具有可组合性的存储平台，用户可以灵活选择适合自己的底层存储系统，目前支持去中心化存储系统IPFS以及分散式存储系统MEFS。除此之外，MEMO存储中间件还给用户提供了一个文件市场，用户可以在该市场中自由交易个人文件的读取权限，还可以通过关键字等描述信息检索文件。
 
 启动中间件服务，默认监听端口为8080。
 
 ## 登录验证
 
-中间件使用[DID](https://www.w3.org/TR/did-core/)作为账号进行登录，DID是一种新型标识符，可实现可验证、去中心化的数字身份。更具体的，我们使用[Memo DID](https://github.com/memoio/did-docs/blob/master/memo-did-design.md)作为通用中间件的账号。因此用户在登录之前需要首先创建Memo DID并添加验证方法，关于Memo DID的操作详情请参考[go-did-sdk](https://github.com/memoio/go-did-sdk)以及[js-did-sdk](https://github.com/memoio/js-did-sdk)。
+中间件使用[DID](https://www.w3.org/TR/did-core/)作为账号进行登录，DID是一种新型标识符，可实现可验证、去中心化的数字身份。更具体的，我们使用[Memo DID](https://github.com/memoio/did-docs/blob/master/memo-did-design.md)作为存储中间件的账号。因此用户在登录之前需要首先创建Memo DID并添加验证方法，关于Memo DID的操作详情请参考[did-go-sdk](https://github.com/memoio/did-go-sdk)以及[did-js-sdk](https://github.com/memoio/did-js-sdk)。
 
 ### 1.1 登录
 
@@ -430,24 +430,24 @@ http://ip:port/mefs/delete
 
 ### 上传至fileDNS
 
-未提供http-api接口，可通过[js-did-sdk](http://132.232.87.203:8088/did/js-did#%E5%88%9B%E5%BB%BAdid-1)或者[go-did-sdk](http://132.232.87.203:8088/did/go-did#创建did-1)上传至fileDNS
+未提供http-api接口，可通过[did-js-sdk](http://132.232.87.203:8088/did/js-did#%E5%88%9B%E5%BB%BAdid-1)或者[did-go-sdk](http://132.232.87.203:8088/did/go-did#创建did-1)上传至fileDNS
 
 ### 授权读取权限
 
-未提供http-api接口，可通过[js-did-sdk](http://132.232.87.203:8088/did/js-did#%E6%8E%88%E4%BA%88%E8%AF%BB%E5%8F%96%E6%9D%83%E9%99%90)或者[go-did-sdk](http://132.232.87.203:8088/did/go-did#授予读取权限)授权读取权限
+未提供http-api接口，可通过[did-js-sdk](http://132.232.87.203:8088/did/js-did#%E6%8E%88%E4%BA%88%E8%AF%BB%E5%8F%96%E6%9D%83%E9%99%90)或者[did-go-sdk](http://132.232.87.203:8088/did/go-did#授予读取权限)授权读取权限
 
 ### 购买读取权限
 
-未提供http-api接口，可通过[js-did-sdk](http://132.232.87.203:8088/did/js-did#%E8%B4%AD%E4%B9%B0%E8%AF%BB%E6%9D%83%E9%99%90)或者[go-did-sdk](http://132.232.87.203:8088/did/go-did#%E8%B4%AD%E4%B9%B0%E8%AF%BB%E6%9D%83%E9%99%90)购买读取权限
+未提供http-api接口，可通过[did-js-sdk](http://132.232.87.203:8088/did/js-did#%E8%B4%AD%E4%B9%B0%E8%AF%BB%E6%9D%83%E9%99%90)或者[did-go-sdk](http://132.232.87.203:8088/did/go-did#%E8%B4%AD%E4%B9%B0%E8%AF%BB%E6%9D%83%E9%99%90)购买读取权限
 
 ### 修改DNS中的file信息
 
-未提供http-api接口，可通过js-did-sdk或者go-did-sdk修改file信息，包括：
+未提供http-api接口，可通过did-js-sdk或者did-go-sdk修改file信息，包括：
 
-- 修改文件所有者：可通过[js-did-sdk](http://132.232.87.203:8088/did/js-did#更改所有者)或者[go-did-sdk](http://132.232.87.203:8088/did/go-did#更改所有者)修改文件所有者
-- 修改文件类型（0表示私有，1表示公开）：可通过[js-did-sdk](http://132.232.87.203:8088/did/js-did#更改文件类型)或者[go-did-sdk](http://132.232.87.203:8088/did/go-did#更改文件类型)修改文件类型
-- 修改文件价格（单价为attomemo）：可通过[js-did-sdk](http://132.232.87.203:8088/did/js-did#更改文件的价格)或者[go-did-sdk](http://132.232.87.203:8088/did/go-did#更改文件的价格)修改文件价格
-- 修改文件的关键词：可通过[js-did-sdk](http://132.232.87.203:8088/did/js-did#更改文件关键词)或者[go-did-sdk](http://132.232.87.203:8088/did/go-did#更改文件关键词)修改文件关键词
+- 修改文件所有者：可通过[did-js-sdk](http://132.232.87.203:8088/did/js-did#更改所有者)或者[did-go-sdk](http://132.232.87.203:8088/did/go-did#更改所有者)修改文件所有者
+- 修改文件类型（0表示私有，1表示公开）：可通过[did-js-sdk](http://132.232.87.203:8088/did/js-did#更改文件类型)或者[did-go-sdk](http://132.232.87.203:8088/did/go-did#更改文件类型)修改文件类型
+- 修改文件价格（单价为attomemo）：可通过[did-js-sdk](http://132.232.87.203:8088/did/js-did#更改文件的价格)或者[did-go-sdk](http://132.232.87.203:8088/did/go-did#更改文件的价格)修改文件价格
+- 修改文件的关键词：可通过[did-js-sdk](http://132.232.87.203:8088/did/js-did#更改文件关键词)或者[did-go-sdk](http://132.232.87.203:8088/did/go-did#更改文件关键词)修改文件关键词
 
 ### 获取DNS中的file信息
 

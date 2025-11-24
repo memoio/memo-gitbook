@@ -12,7 +12,7 @@ The DID Server is a DID service deployed and maintained by MEMOLabs. For detaile
 
 go-did is an SDK implemented in the Golang language, which supports the creation, querying, deletion, and modification of DIDs (Decentralized Identifiers).
 
-[did-go-sdk](https://github.com/memoio/go-did-sdk)
+[did-go-sdk](https://github.com/memoio/did-go-sdk)
 
 ### Installing go-did
 
@@ -32,7 +32,7 @@ cd did-solidity
 git checkout meeda-v2.0.0
 cd ..
 ### Get go-did
-git clone https://github.com/memoio/go-did-sdk.git
+git clone https://github.com/memoio/did-go-sdk.git
 ### Switch to the latest branch
 cd go-did
 git checkout meeda-v2.0.2
@@ -51,7 +51,7 @@ replace (
 
 ### Using go-did
 
-You can follow the instructions in the [usage documentation](https://github.com/memoio/go-did-sdk/blob/master/README.md).
+You can follow the instructions in the [usage documentation](https://github.com/memoio/did-go-sdk/blob/master/README.md).
 
 ## js-did
 
@@ -61,8 +61,8 @@ js-did is an SDK implemented in the JavaScript language, which supports the crea
 
 You need to download it from:
 
-[did-js-sdk](https://github.com/memoio/js-did-sdk#)
+[did-js-sdk](https://github.com/memoio/did-js-sdk#)
 
 ## Using js-did
 
-You can follow the instructions in the [usage documentation](https://github.com/memoio/js-did-sdk/blob/master/README.md).
+You can follow the instructions in the [usage documentation](https://github.com/memoio/did-js-sdk/blob/master/README.md).

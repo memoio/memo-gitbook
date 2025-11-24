@@ -13,10 +13,10 @@ Installation of Meeda light node includes the following steps:
    ```bash
    cd $HOME
    ### delete all the local dependency libraries include Meeda-node
-   rm -rf meeda-node did-solidity go-did-sdk memov2-contractsv2 go-mefs-v2 mefs-relay memo-go-contracts-v2
+   rm -rf meeda-node did-solidity did-go-sdk memov2-contractsv2 go-mefs-v2 mefs-relay memo-go-contracts-v2
    ### download dependency libraries (GitHub)
    git clone https://github.com/memoio/did-solidity.git
-   git clone https://github.com/memoio/go-did-sdk.git
+   git clone https://github.com/memoio/did-go-sdk.git
    git clone https://github.com/memoio/memov2-contractsv2.git
    git clone https://github.com/memoio/go-mefs-v2.git
    git clone https://github.com/memoio/mefs-relay.git
@@ -29,8 +29,8 @@ Installation of Meeda light node includes the following steps:
    cd did-solidity
    git checkout meeda-v1.2.0
    cd ..
-   ## git checkout to the newest branch(go-did-sdk)
-   cd go-did-sdk
+   ## git checkout to the newest branch(did-go-sdk)
+   cd did-go-sdk
    git checkout meeda-v2.0.2
    cd ..
    ### download meeda-node
