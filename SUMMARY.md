@@ -87,6 +87,8 @@
   * [HTTP 402](docs/memo-aiagent/x402/HTTP%20402.md)
   * [MEMO Facilitator](docs/memo-aiagent/x402/Facilitator.md)
 
+* [EIP-8004](docs/memo-aiagent/eip-8004/introduction.md)
+
 * [DID](docs/memo-aiagent/did/memo-did.md)
 
 * [DA](docs/memo-aiagent/da/developers/Detailed-description-of-Meeda.md)
