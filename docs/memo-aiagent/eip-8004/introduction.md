@@ -1,0 +1,148 @@
+# EIP-8004: Trustless Agents
+
+## Background & Motivation
+
+As more AI-based agents emerge — from LLM-driven assistants and automation tools to on-chain/off-chain task executors — the community wants an open, cross-organization, trustless agent network (agent economy). The vision is for agents deployed by different people or organizations to discover, choose, and collaborate with each other without relying on centralized intermediaries.
+
+Existing protocols (e.g., Google A2A) address agent-to-agent messaging, task orchestration, and collaboration. MCP (Model Context Protocol) exposes capabilities (prompts/tools/resources/completions). However, these solutions lack an on-chain trust layer. When an agent wants to collaborate with another agent outside its organization or trust domain, there is no standard way to verify the counterparty’s identity, reputation, or reliability.
+
+EIP-8004 addresses this trust gap.
+
+## Overview of EIP-8004
+
+EIP-8004 (“Trustless Agents”) is a proposal for Ethereum/EVM chains (L1 or L2), published on 2025-08-13. It’s not an AI model or tool; it’s a standard to build an on-chain discovery and trust layer for autonomous agents.
+
+Official spec: [EIP-8004](https://eips.ethereum.org/EIPS/eip-8004)
+
+It introduces three lightweight on-chain registries — Identity, Reputation, and Validation — to provide each agent with:
+
+* A unique, queryable, transferable identity (NFT-based)
+* Public, structured, and composable on-chain reputation/feedback
+* Verifiable task execution/output/proofs (e.g., via zkML, TEE attestation, stake-secured re-execution)
+
+This enables agents across organizations, chains, and deployments to safely discover, choose, and collaborate without prior trust.
+
+In short, EIP-8004 lays the foundation for “ID + rating + verification + public ledger” for agents, making the agent economy feasible.
+
+> Abstract: “This protocol proposes to use blockchains to discover, choose, and interact with agents across organizational boundaries without pre-existing trust, thus enabling open-ended agent economies.”
+
+## The Three Registries
+
+The core of EIP-8004 is three registries that cover different layers of trust and governance:
+
+| Registry | Responsibilities / Functions | On-chain Artifacts / Mechanisms |
+| --- | --- | --- |
+| Identity Registry | Assign a unique identity (AgentID) to each Agent for discovery, recognition, and transfer | ERC-721 + URIStorage; Agent minted as NFT; `tokenURI` points to agent registration file (`agent-card.json`) |
+| Reputation Registry | Provide structured client/contractor feedback (scores, tags, reviews) to form reputation records | `giveFeedback()` / `NewFeedback` event; on-chain readable interfaces (review list, average score, etc.) |
+| Validation Registry | Independently verify task results (re-execution, zkML, TEE, arbitration) and record outcomes | `validationRequest()` / `validationResponse()`; `ValidationResponse` event; on-chain storage of validation status/history |
+
+### Identity Registry
+
+* Upon registration, each agent mints an ERC-721 token (agentId). The token owner is the agent’s owner/operator.
+* The `tokenURI` points to an agent registration file (`agent-card.json`) that includes description (name/description/image), a list of endpoints (e.g., A2A endpoint, MCP endpoint, DID, ENS, agentWallet), and the trust models the agent supports (`supportedTrust`, e.g., reputation, crypto-economic, tee-attestation).
+* This design makes agent identity discoverable, transferable, and updatable. It suits an “Agent Marketplace” and lays the groundwork for “AgentFi.”
+
+### Reputation Registry
+
+* When an agent completes a task (for a human or another agent), the client (human or agent) can submit feedback including a 0–100 score, optional tags (tag1, tag2), and an off-chain URI (e.g., ipfs://…) to detailed content. `feedbackAuth` is required: the agent pre-signs and authorizes that client to rate it, which helps prevent arbitrary spam/scam ratings.
+* Feedback events (`NewFeedback`) are written on-chain and readable by everyone/contracts. Simple on-chain aggregation (e.g., averages) is supported; more complex analytics (reputational graphs, spam detection, reviewer reputation) can run off-chain.
+* If feedback is revoked (`revokeFeedback`), an event is emitted and remains on-chain visible.
+
+### Validation Registry
+
+* For high-value/high-risk tasks, reputation/feedback alone may be insufficient. The agent can submit a `validationRequest` asking a validator to independently verify execution (e.g., re-execution, TEE attestation, zkML verification, arbitration). The request includes off-chain inputs/outputs (URIs) and a commitment hash (`requestHash`).
+* The validator responds via `validationResponse()` (e.g., passed/failed/score) and can attach URIs/tags to more detailed audit content. The system stores this response as on-chain state (validator address, agentId, response, last updated time, etc.).
+* Anyone/contracts can query an agent’s historical validation records (by `requestHash` or aggregated by `agentId`), enabling third-party verification and public auditability. This fits security/compliance/high-trust scenarios (finance, healthcare, legal, critical infrastructure, etc.).
+
+## Agent Registration & Metadata (agent-card.json)
+
+As noted, each agent’s `tokenURI` points to a JSON file (the agent registration file / “agent card”). A simplified example:
+
+```json
+{
+  "type": "https://eips.ethereum.org/EIPS/eip-8004#registration-v1",
+  "name": "myAgentName",
+  "description": "A natural language description ...",
+  "image": "https://example.com/agentimage.png",
+  "endpoints": [
+    { "name": "A2A", "endpoint": "https://...", "version": "0.3.0" },
+    { "name": "MCP", "endpoint": "...", "version": "2025-.."},
+    { "name": "DID", "endpoint": "did:..."},
+    { "name": "agentWallet", "endpoint": "eip155:1:0x..." }
+  ],
+  "registrations": [
+    { "agentId": 22, "agentRegistry": "eip155:1:{identityRegistry}" }
+  ],
+  "supportedTrust": ["reputation", "crypto-economic", "tee-attestation"]
+}
+```
+
+This structure enables:
+
+* Describing the agent’s capabilities/style/use (name/description/image)
+* Listing supported communication/capability frameworks (endpoints: A2A, MCP, DID, wallet, etc.)
+* Declaring supported trust mechanisms (`supportedTrust`), from “reputation” only to enhanced models like “TEE attestation” and “validation”
+
+It’s flexible: some agents may rely on reputation for low-risk tasks (e.g., ordering pizza), while others use validation (zkML/TEE/re-execution) for higher-security/trust needs. EIP-8004 treats trust as pluggable and tiered.
+
+## Execution, Feedback, and Validation Flow (Typical)
+
+Given EIP-8004’s design goals, a typical call/execution flow may look like:
+
+1. Agent A registers (NFT + agent-card.json), publishes capabilities (MCP/A2A/endpoints) and supported trust models (reputation, validation, etc.).
+2. A user or Agent B discovers Agent A, obtains its call/communication endpoints from agent-card.json (e.g., MCP).
+3. B calls A for a task — e.g., asking A to use certain tools/LLM/storage/TEE to execute.
+4. A executes the task (using infrastructure such as Storage/TEE/LLM/MemoLabs resources).
+5. After completion, B (or the client) submits feedback by calling the reputation registry’s `giveFeedback()`, providing score/tags/off-chain review URI.
+6. For important/high-risk tasks, B or a third party may require validation: A initiates `validationRequest()` and specifies a validator; the validator verifies (re-execution/zkML/TEE) and then calls `validationResponse()` on-chain.
+7. Upper-layer apps (Marketplace/Agent Explorer/Dashboards/automation) leverage on-chain identity/reputation/validation to decide whether to continue trusting and transacting with the agent.
+
+In this process:
+
+* Identity — to discover and recognize agents
+* Reputation — for general evaluation/filtering/composition
+* Validation — for high-trust/high-stakes scenarios
+
+This structure is flexible (reputation-only for simple use) and secure (pluggable validation when needed), enabling a risk-tiered trust model.
+
+## Relation to MCP / A2A
+
+* MCP (Model Context Protocol): publishes and invokes agent capabilities (prompts/tools/resources/completions).
+* A2A (Agent-to-Agent): handles inter-agent messaging, task collaboration, and exchanges.
+
+Neither provides trust establishment/verification by itself. Without something more, unfamiliar agents across organizations/deployments cannot collaborate safely.
+
+EIP-8004 does not replace MCP or A2A; it complements them as a trust layer, adding an open, decentralized, standardized, and verifiable trust foundation to agent communication, invocation, and collaboration.
+
+Therefore:
+
+* The “Access” layer box labeled “EIP-8004 Protocol Supported (Python/Javascript SDK & Framework)” refers to this standard/protocol.
+* Core Services (DID/Attestation/DA/Payments, etc.) plus Infrastructure (TEE/Storage/LLM) work with EIP-8004 — EIP-8004 defines identity/reputation/validation and call structure; the other services provide the underlying capabilities.
+
+## Risks, Challenges, and Considerations
+
+EIP-8004 provides a strong trust foundation, but there are challenges:
+
+* Reputation systems are vulnerable to Sybil/whale/rating-manipulation attacks. `feedbackAuth` reduces malicious downvotes but cannot prevent self-Sybil or inflated scores; stronger defenses (reviewer reputation, staking/slashing, penalties) require community/third-party systems.
+* Validation incentives and standards are not uniform. Who validates? How to ensure impartiality or prevent bribery/collusion? How to balance slashing/stake/rewards/costs? These are design choices outside the scope of EIP-8004.
+* On-chain cost/composability vs. off-chain complexity. While EIP-8004 ensures metadata/feedback/validation states are on-chain queryable, advanced scoring/aggregation often runs off-chain (indexers/subgraphs/aggregators), introducing centralization/trust/indexing/maintenance concerns.
+* The proposal is still in draft/community review. As of late 2025, there are references and discussions but no large-scale mature deployments. The standard and interfaces may evolve.
+
+When adopting EIP-8004, carefully design supplementary mechanisms (reviewer reputation, staking/slashing, incentives, validator selection, validation fees) per your scenario.
+
+## Outlook and Adoption
+
+For the MemoLabs + AIAgent + Web3 ecosystem:
+
+* Deploy Identity/Reputation/Validation registries: leverage MemoLabs DID + Storage + TEE as infrastructure; let each agent register on-chain (AgentID) and publish `agent-card.json` with capabilities (MCP/A2A/storage/TEE/etc.).
+* Build an Agent Marketplace/Explorer: allow users/developers to browse/filter/select trustworthy agents; construct rating/selection mechanisms from Reputation and Validation.
+* Integrate payments (e.g., x402/micropayments) + trust (EIP-8004) + infrastructure (Storage/TEE/LLM) to build a real “Agent economy/Agent service market/AgentFi.”
+* Long term, develop more trust infrastructure: reputation aggregators, validator services (networks/stake/zkML/TEE/arbitration), insurance/guarantees/credit systems, compliance audits.
+
+Thus MemoLabs’ AIAgent module is not a closed system but a key node/infrastructure provider for an open agent ecosystem.
+
+## Conclusion
+
+EIP-8004 is a foundational trust protocol for the agentic economy. It defines standards for agent identity, reputation, and validation so autonomous agents can discover, trust, and collaborate without prior trust.
+
+For MemoLabs / memo-aiagent, adopting EIP-8004 adds a common, standardized, verifiable, and open trust layer, increasing interoperability, scalability, and forward-compatibility across the system.
