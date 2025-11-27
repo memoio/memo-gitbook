@@ -7,7 +7,7 @@ x402 通过简单的 HTTP 请求-响应模式实现可编程支付。当客户�
 
 ### 交互流程
 
-![[Payment-flow.png]]
+![Payment-flow](./Payment-flow.png)
 
 1. `Client` 向 `resource server` 发起一次普通的 HTTP 请求。
 2. `Resource server` 返回 `402 Payment Required` 状态码，并在响应体中附带一个 `Payment Required Response` JSON 对象（描述支付要求）。
