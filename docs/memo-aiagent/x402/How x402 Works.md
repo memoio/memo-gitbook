@@ -7,7 +7,7 @@ x402 enables programmatic payments over HTTP using a simple request-response flo
 
 ### Interaction Flow
 
-![[Payment-flow.png]]
+![Payment-flow](./Payment-flow.png)
 
 1. `Client` makes an HTTP request to a `resource server`
 2. `Resource server` responds with a `402 Payment Required` status and a `Payment Required Response` JSON object in the response body.
