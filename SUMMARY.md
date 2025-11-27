@@ -90,7 +90,7 @@
   
   * [MEMO Facilitator](docs-cn/memo-aiagent/x402/Facilitator.md)
 
-* [EIP-8004](docs-cn/memo-aiagent/eip-8004/introduction.md)
+* [EIP-8004](docs-cn/memo-aiagent/eip-8004/eip-8004.md)
 
 * [DID](docs-cn/memo-aiagent/did/memo-did.md)
 
