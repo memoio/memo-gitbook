@@ -7,7 +7,7 @@
 * [Introducing MEMO](docs/Introduction.md)
 
 ## MEMO PROTOCOL
-  
+
 * [Data Blockchain](docs/memo-protocol/Data-Blockchain.md)
 
 * [MEMO Protocol](docs/memo-protocol/protocol/README.md)
@@ -51,7 +51,7 @@
   * [Smart Contract Address](docs/memo-protocol/getting-started/Smart-Contract-Address.md)
 
 ## TOKENOMICS
-  
+
 * [MEMO & Deposit](docs/tokenomics/Memo-Deposit.md)
   
 * [Distribution](docs/tokenomics/Distribution.md)
@@ -81,19 +81,20 @@
 ## MEMO AIAGENT
 
 * [Introduction](docs/memo-aiagent/introduction.md)
-
 * [x402](docs/memo-aiagent/x402/x402%20Introduction.md)
 
   * [How x402 Works](docs/memo-aiagent/x402/How%20x402%20Works.md)
 
   * [HTTP 402](docs/memo-aiagent/x402/HTTP%20402.md)
-  
+
   * [MEMO Facilitator](docs/memo-aiagent/x402/Facilitator.md)
-
 * [ERC-8004](docs/memo-aiagent/erc-8004/erc-8004.md)
+* [Attestation](docs/memo-aiagent/attestation/introduction.md)
+  * [How EAS Work](docs/memo-aiagent/attestation/How%20EAS%20Work.md.md)
 
+* [Mefs-MCP-Server](docs/memo-aiagent/mcp-memo-server/mefs-mcp-server.md)
+* [Elizaos-plugin](docs/memo-aiagent/mcp-memo-server/elizaos-plugin.md)
 * [DID](docs/memo-aiagent/did/memo-did.md)
-
 * [DA](docs/memo-aiagent/da/developers/Detailed-description-of-Meeda.md)
 
   * [Developers](docs/memo-aiagent/da/developers/LightNode-API.md)
@@ -111,7 +112,6 @@
   * [Node](docs/memo-aiagent/da/node/How-to-build-LightNode.md)
 
     * [Layer2+Meeda](docs/memo-aiagent/da/node/Layer2+Meeda.md)
-
 * [Storage](docs/memo-aiagent/memo-storage/storage.md)
 
 ## FAQ
