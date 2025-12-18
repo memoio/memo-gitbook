@@ -92,10 +92,9 @@
 
 * [ERC-8004](docs-cn/memo-aiagent/erc-8004/erc-8004.md)
 
-* [Attestation](docs-cn/memo-aiagent/attestation/eas-introduction.md)
-
-  * [How EAS Work](docs-cn/memo-aiagent/attestation/How-EAS-Work.md)
-
+* [Attestation Server](docs-cn/memo-aiagent/attestation/attestation-introduction.md)
+  * [How AS Work](docs-cn/memo-aiagent/attestation/how-attestation-work.md)
+  
 * [MEFS MCP Sever](docs-cn/memo-aiagent/mcp-memo-server/mefs-mcp-server.md)
 
 * [Elizaos Plugin](docs-cn/memo-aiagent/elizaos-plugin/elizaos-plugin.md)
