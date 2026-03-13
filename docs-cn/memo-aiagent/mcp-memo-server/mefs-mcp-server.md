@@ -20,7 +20,36 @@ MEMO MCP Server为AI代理提供标准的存储接口，允许AI代理将生成�
 
 在使用MEFS MECP server前，请确保您已创建了EVM私钥。您可以使用[MetaMask](https://metamask.io/)，[Okx Wallet](https://web3.okx.com/)等EVM钱包创建钱包，并获取您的私钥。
 
-### 克隆仓库
+### 配置 MCP 服务器（需要指定私钥）
+
+您可以在您的客户端中，使用以下配置启动MCP服务器
+
+**标准配置**适用于大多数客户端
+
+```json
+{
+  "mcpServers": {
+    "mefs-storage-server": {
+      "command": "npx",
+      "args": ["mefs-mcp-server"],
+      "env": {
+        "MCP_TRANSPORT_MODE": "stdio",
+        "MEFS_PRIVATE_KEY": "<YOUR-PRIVATE-KEY>",
+      },
+      "shell": true,
+      "cwd": "./",
+    },
+  },
+}
+```
+
+将YOUR-PRIVATE-KEY替换为您的EVM私钥。
+
+## SSE模式
+
+MEFS-MCP-SERVER支持SSE模式，您可以通过以下步骤启动SSE模式，并配置到您的个人AI代理中:
+
+### 克隆项目
 
 ```bash
 git clone https://github.com/memoio/mefs-mcp-server.git && cd mefs-mcp-server
@@ -38,30 +67,29 @@ pnpm install
 pnpm run build
 ```
 
-### 配置 MCP 服务器（需要指定私钥）
+### 以SSE模式启动
 
-您可以在您的客户端中，使用以下配置启动MCP服务器
+```bash
+pnpm run start:sse
+```
 
-**标准配置**适用于大多数客户端
+您可以在项目的`.env`中配置`MEFS_PRIVATE_KEY`参数，或者使用`export`将`MEFS_PRIVATE_KEY`参数配置到环境变量中，或者使用以下命令启动，从而制定您的个人EVM私钥：
 
-```json
+```bash
+MEFS_PRIVATE_KEY=<YOUR-PRIVATE-KEY> pnpm run start:sse
+```
+
+### 配置MCP服务 (SSE mode)
+
+```
 {
   "mcpServers": {
-    "storacha-storage-server": {
-      "command": "node",
-      "args": ["./dist/index.js"],
-      "env": {
-        "MCP_TRANSPORT_MODE": "stdio",
-        "MEFS_PRIVATE_KEY": "<YOUR-PRIVATE-KEY>",
-      },
-      "shell": true,
-      "cwd": "./",
+    "mefs-storage-server": {
+      "url": "http://localhost:3001/sse",
     },
   },
 }
 ```
-
-将YOUR-PRIVATE-KEY替换为您的EVM私钥。
 
 ## 使用MCP工具
 
